@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Ricardo\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ricardo\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_GameStudio1_walkingSim.902771694.00" t="ExcludeRecursive" />
+    <e p="S:\Unity Projects\GameStudio1_walkingSim" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="First Person Drifter Controller" t="Include">
+          <e p="info.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="FirstPersonDrifter.cs" t="Include" />
+            <e p="LockMouse.cs" t="Include" />
+            <e p="MouseLook.cs" t="Include" />
+            <e p="Optional" t="Include">
+              <e p="CameraFadeOnStart.cs" t="Include" />
+              <e p="CameraZoom.cs" t="Include" />
+              <e p="CheckIfBelowLevel.cs" t="Include" />
+              <e p="HeadBob.cs" t="Include" />
+              <e p="PauseMenu.cs" t="Include" />
+            </e>
+            <e p="Utils" t="Include">
+              <e p="CameraFade.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="DeferredFogEffect.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="MyLightingShaderGUI.cs" t="Include" />
+          </e>
+          <e p="TangentSpaceVisualizer.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="GroundFogTest.shader" t="Include" />
+          <e p="GroundGradient.shader" t="Include" />
+          <e p="ShaderFog.shader" t="Include" />
+          <e p="Testing" t="Include">
+            <e p="DeferredFog.shader" t="Include" />
+            <e p="My First Lighting Shader.shader" t="Include" />
+            <e p="My First Shader.shader" t="Include" />
+            <e p="My Lighting.cginc" t="Include" />
+            <e p="My Shadows.cginc" t="Include" />
+            <e p="Texture Splatting.shader" t="Include" />
+            <e p="Textured With Detail.shader" t="Include" />
+          </e>
+          <e p="VerticalFog.shader" t="Include" />
+        </e>
+      </e>
+      <e p="GameStudio1_walkingSim.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
