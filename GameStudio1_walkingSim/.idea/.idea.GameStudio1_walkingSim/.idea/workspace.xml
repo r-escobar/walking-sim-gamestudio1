@@ -4,6 +4,11 @@
     <list default="true" id="df86b96d-9484-47e3-8f9a-2e2a85d67cbb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameStudio1_walkingSim/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameStudio1_walkingSim/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameStudio1_walkingSim/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameStudio1_walkingSim/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,6 +74,34 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1770761985">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="529" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="529" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -78,10 +111,11 @@
             <state relative-caret-position="493">
               <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
-                <marker date="1538621344000" expanded="true" signature="40:430" ph="{...}" />
-                <marker date="1538621344000" expanded="true" signature="442:2131" ph="{...}" />
-                <marker date="1538621344000" expanded="true" signature="451:517" ph="{...}" />
-                <marker date="1538621344000" expanded="true" signature="532:2123" ph="{...}" />
+                <marker date="1538947316994" expanded="true" signature="26:2159" ph="{...}" />
+                <marker date="1538947316994" expanded="true" signature="40:430" ph="{...}" />
+                <marker date="1538947316994" expanded="true" signature="442:2131" ph="{...}" />
+                <marker date="1538947316994" expanded="true" signature="451:517" ph="{...}" />
+                <marker date="1538947316994" expanded="true" signature="532:2123" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -90,47 +124,74 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
+            <state relative-caret-position="-418">
               <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
               <folding>
-                <marker date="1538617220000" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
-                <marker date="1538617220000" expanded="false" signature="125:163" ph="..." />
-                <marker date="1538617220000" expanded="true" signature="2100:2387" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="2412:6430" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="2787:5506" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="2835:3038" ph="/* See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit ... */" />
-                <marker date="1538617220000" expanded="true" signature="3129:3252" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="3265:3479" ph="/* However, just raycasting straight down from the center can fail when on steep slopes ... */" />
-                <marker date="1538617220000" expanded="true" signature="3479:3702" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="3854:4070" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="4104:4199" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="4448:4755" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="4876:5152" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="5405:5496" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="5506:6132" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="5647:5751" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="5888:6122" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="6573:6614" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="6621:6818" ph="/* If falling damage occured, this is the place to do something about it. You can make the player ... */" />
-                <marker date="1538617220000" expanded="true" signature="6867:6942" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
+                <marker date="1538947316959" expanded="false" signature="125:163" ph="..." />
+                <marker date="1538947316959" expanded="true" signature="261:6944" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="2100:2387" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="2412:6430" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="2787:5506" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="2835:3038" ph="/* See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit ... */" />
+                <marker date="1538947316959" expanded="true" signature="3129:3252" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="3265:3479" ph="/* However, just raycasting straight down from the center can fail when on steep slopes ... */" />
+                <marker date="1538947316959" expanded="true" signature="3479:3702" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="3854:4070" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="4104:4199" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="4448:4755" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="4876:5152" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="5405:5496" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="5506:6132" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="5647:5751" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="5888:6122" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="6573:6614" ph="{...}" />
+                <marker date="1538947316959" expanded="true" signature="6621:6818" ph="/* If falling damage occured, this is the place to do something about it. You can make the player ... */" />
+                <marker date="1538947316959" expanded="true" signature="6867:6942" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PulsatingGlow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding>
+                <marker date="1538950160756" expanded="false" signature="6:78" ph="..." />
+                <marker date="1538950160756" expanded="true" signature="122:857" ph="{...}" />
+                <marker date="1538950160756" expanded="true" signature="386:608" ph="{...}" />
+                <marker date="1538950160756" expanded="true" signature="662:855" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="357">
               <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding>
-                <marker date="1390349004000" expanded="false" signature="25:63" ph="..." />
-                <marker date="1390349004000" expanded="true" signature="103:563" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="120:146" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="165:463" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="270:308" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="396:457" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="512:561" ph="{...}" />
+                <marker date="1538947750805" expanded="true" signature="0:107" ph="/* original by Mr. Animator ... */" />
+                <marker date="1538947750805" expanded="false" signature="115:153" ph="..." />
+                <marker date="1538947750805" expanded="true" signature="191:1444" ph="{...}" />
+                <marker date="1538947750805" expanded="true" signature="352:1442" ph="{...}" />
+                <marker date="1538947750805" expanded="true" signature="563:601" ph="{...}" />
+                <marker date="1538947750805" expanded="true" signature="612:831" ph="{...}" />
+                <marker date="1538947750805" expanded="true" signature="757:823" ph="{...}" />
+                <marker date="1538947750805" expanded="true" signature="858:1290" ph="{...}" />
+                <marker date="1538947750805" expanded="true" signature="1301:1438" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -147,9 +208,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PulsatingGlow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -161,6 +224,8 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/GroundGradient.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader" />
         <option value="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs" />
+        <option value="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PulsatingGlow.cs" />
       </list>
     </option>
   </component>
@@ -171,10 +236,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="x" value="2593" />
+    <option name="y" value="-8" />
+    <option name="width" value="1920" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -185,10 +250,10 @@
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,11 +303,12 @@
       <workItem from="1538619666217" duration="1676000" />
       <workItem from="1538668323831" duration="26000" />
       <workItem from="1538883214996" duration="655000" />
+      <workItem from="1538947620356" duration="2002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5593000" />
+    <option name="totallyTimeSpent" value="7595000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -254,9 +320,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="2552" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08120805" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1098081" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -268,7 +335,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" weight="0.32839313" />
       <window_info anchor="bottom" id="Unity" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
@@ -309,60 +376,84 @@
     <entry file="file://$PROJECT_DIR$/Assets/Shaders/VerticalFog.shader" />
     <entry file="file://$PROJECT_DIR$/Assets/Shaders/My Lighting.cginc" />
     <entry file="file://$PROJECT_DIR$/Assets/Shaders/GroundGradient.shader" />
-    <entry file="file://$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader">
+    <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <marker date="1538621344000" expanded="true" signature="40:430" ph="{...}" />
-            <marker date="1538621344000" expanded="true" signature="442:2131" ph="{...}" />
-            <marker date="1538621344000" expanded="true" signature="451:517" ph="{...}" />
-            <marker date="1538621344000" expanded="true" signature="532:2123" ph="{...}" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
+        <state relative-caret-position="-418">
           <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
           <folding>
-            <marker date="1538617220000" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
-            <marker date="1538617220000" expanded="false" signature="125:163" ph="..." />
-            <marker date="1538617220000" expanded="true" signature="2100:2387" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="2412:6430" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="2787:5506" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="2835:3038" ph="/* See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit ... */" />
-            <marker date="1538617220000" expanded="true" signature="3129:3252" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="3265:3479" ph="/* However, just raycasting straight down from the center can fail when on steep slopes ... */" />
-            <marker date="1538617220000" expanded="true" signature="3479:3702" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="3854:4070" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="4104:4199" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="4448:4755" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="4876:5152" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="5405:5496" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="5506:6132" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="5647:5751" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="5888:6122" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="6573:6614" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="6621:6818" ph="/* If falling damage occured, this is the place to do something about it. You can make the player ... */" />
-            <marker date="1538617220000" expanded="true" signature="6867:6942" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
+            <marker date="1538947316959" expanded="false" signature="125:163" ph="..." />
+            <marker date="1538947316959" expanded="true" signature="261:6944" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="2100:2387" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="2412:6430" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="2787:5506" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="2835:3038" ph="/* See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit ... */" />
+            <marker date="1538947316959" expanded="true" signature="3129:3252" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="3265:3479" ph="/* However, just raycasting straight down from the center can fail when on steep slopes ... */" />
+            <marker date="1538947316959" expanded="true" signature="3479:3702" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="3854:4070" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="4104:4199" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="4448:4755" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="4876:5152" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="5405:5496" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="5506:6132" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="5647:5751" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="5888:6122" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="6573:6614" ph="{...}" />
+            <marker date="1538947316959" expanded="true" signature="6621:6818" ph="/* If falling damage occured, this is the place to do something about it. You can make the player ... */" />
+            <marker date="1538947316959" expanded="true" signature="6867:6942" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="136">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
-            <marker date="1390349004000" expanded="false" signature="25:63" ph="..." />
-            <marker date="1390349004000" expanded="true" signature="103:563" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="120:146" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="165:463" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="270:308" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="396:457" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="512:561" ph="{...}" />
+            <marker date="1538947750805" expanded="true" signature="0:107" ph="/* original by Mr. Animator ... */" />
+            <marker date="1538947750805" expanded="false" signature="115:153" ph="..." />
+            <marker date="1538947750805" expanded="true" signature="191:1444" ph="{...}" />
+            <marker date="1538947750805" expanded="true" signature="352:1442" ph="{...}" />
+            <marker date="1538947750805" expanded="true" signature="563:601" ph="{...}" />
+            <marker date="1538947750805" expanded="true" signature="612:831" ph="{...}" />
+            <marker date="1538947750805" expanded="true" signature="757:823" ph="{...}" />
+            <marker date="1538947750805" expanded="true" signature="858:1290" ph="{...}" />
+            <marker date="1538947750805" expanded="true" signature="1301:1438" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <marker date="1538947316994" expanded="true" signature="26:2159" ph="{...}" />
+            <marker date="1538947316994" expanded="true" signature="40:430" ph="{...}" />
+            <marker date="1538947316994" expanded="true" signature="442:2131" ph="{...}" />
+            <marker date="1538947316994" expanded="true" signature="451:517" ph="{...}" />
+            <marker date="1538947316994" expanded="true" signature="532:2123" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PulsatingGlow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <marker date="1538950160756" expanded="false" signature="6:78" ph="..." />
+            <marker date="1538950160756" expanded="true" signature="122:857" ph="{...}" />
+            <marker date="1538950160756" expanded="true" signature="386:608" ph="{...}" />
+            <marker date="1538950160756" expanded="true" signature="662:855" ph="{...}" />
           </folding>
         </state>
       </provider>
