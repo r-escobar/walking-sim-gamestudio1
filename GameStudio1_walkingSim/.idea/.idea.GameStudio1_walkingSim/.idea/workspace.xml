@@ -3,10 +3,795 @@
   <component name="ChangeListManager">
     <list default="true" id="df86b96d-9484-47e3-8f9a-2e2a85d67cbb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameStudio1_walkingSim/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameStudio1_walkingSim/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat_Building.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat_Building.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat_Prop.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat_Prop.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AnalyticsSender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AnalyticsSender.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/AssetBrowserManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/AssetBrowserManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/AssetBrowserWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/AssetBrowserWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/GUIHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/GUIHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/ThumbnailCache.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/ThumbnailCache.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/WelcomeWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/AssetBrowser/WelcomeWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/CheckBuild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/CheckBuild.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/DummyVERSION.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/DummyVERSION.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Importer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Importer/AttributionFileGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Importer/AttributionFileGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Importer/PolyImporter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Importer/PolyImporter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/PostInstallHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/PostInstallHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/PtAnalytics.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/PtAnalytics.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/PtSettingsEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/PtSettingsEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/PtUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/PtUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/BackArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/BackArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/BackArrowDark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/BackArrowDark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/DarkGrey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/DarkGrey.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/LightGrey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/LightGrey.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/PolyToolkitTitle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/PolyToolkitTitle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/PolyToolkitWelcome.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/Textures/PolyToolkitWelcome.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/WarnAboutUsingPolyInternal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/WarnAboutUsingPolyInternal.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/WarnIfManagerNotInScene.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Editor/WarnIfManagerNotInScene.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScenes/HelloPoly.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScenes/HelloPoly.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScenes/ShowFeaturedExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScenes/ShowFeaturedExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScripts/HelloPoly.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScripts/HelloPoly.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScripts/Rotate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScripts/Rotate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScripts/ShowFeaturedExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ExampleScripts/ShowFeaturedExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/AsyncImporter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/AsyncImporter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/AttributionGeneration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/AttributionGeneration.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Authenticator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Authenticator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/AutoStringify.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/AutoStringify.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/CoroutineRunner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/CoroutineRunner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/DisabledPropertyAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/DisabledPropertyAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/EditTimeImportOptions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/EditTimeImportOptions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Features.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Features.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Gltf1Schema.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Gltf1Schema.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Gltf2Schema.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Gltf2Schema.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/GltfMaterialConverter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/GltfMaterialConverter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/GltfSchemaCommon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/GltfSchemaCommon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/HelpTextAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/HelpTextAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/IUriLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/IUriLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/ImportGltf.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/ImportGltf.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/IntRange.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/IntRange.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/MathUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/MathUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/MeasurementUnits.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/MeasurementUnits.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PolyInternalUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PolyInternalUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PolyMainInternal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PolyMainInternal.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PolyUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PolyUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PtDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PtDebug.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PtSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/PtSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/ThumbnailFetcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/ThumbnailFetcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/UnityCompat.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/UnityCompat.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Version.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/Version.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/api_clients.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/api_clients/poly_client.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/api_clients/poly_client/PolyClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/api_clients/poly_client/PolyClient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/api_clients/poly_client/PolyClientUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/api_clients/poly_client/PolyClientUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/caching.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/caching/PersistentBlobCache.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/caching/PersistentBlobCache.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/entitlement.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/entitlement/OAuth2Identity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/entitlement/OAuth2Identity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/export.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/export/ExportUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/export/ExportUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/export/Exporter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/export/Exporter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util/BackgroundMain.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util/BackgroundMain.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util/BackgroundWork.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util/BackgroundWork.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util/ConcurrentQueue.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util/ConcurrentQueue.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util/WebRequestManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/model/util/WebRequestManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/AllBrushes.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/AllBrushes.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles/Bubbles.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles/Bubbles.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles/Bubbles.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles/Bubbles.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles/Bubbles.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles/Bubbles.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Bubbles/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl/CelVinyl.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl/CelVinyl.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl/CelVinyl_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl/CelVinyl_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl/CelVinyl_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl/CelVinyl_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CelVinyl/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ChromaticWave.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ChromaticWave/ChromaticWave.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ChromaticWave/ChromaticWave.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ChromaticWave/ChromaticWave.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ChromaticWave/ChromaticWave.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ChromaticWave/ChromaticWave.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ChromaticWave/ChromaticWave.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristles/CoarseBristles.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristles/CoarseBristles.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristles/CoarseBristles.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristles/CoarseBristles.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristles/leaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristles/leaves.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristlesSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristlesSingleSided/CoarseBristlesSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristlesSingleSided/CoarseBristlesSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristlesSingleSided/CoarseBristlesSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/CoarseBristlesSingleSided/CoarseBristlesSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/Comet.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/Comet.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/Comet_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/Comet_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/Comet_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/Comet_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/gradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Comet/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull/DiamondHull.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull/DiamondHull.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull/DiamondHull_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull/DiamondHull_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull/DiamondHull_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull/DiamondHull_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DiamondHull/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Disco.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Disco/Disco.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Disco/Disco.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Disco/Disco.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Disco/Disco.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Disco/Disco.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Disco/Disco.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DotMarker.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DotMarker/DotMarker.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DotMarker/DotMarker.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DotMarker/DotMarker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DotMarker/DotMarker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DotMarker/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DotMarker/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots/Dots.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots/Dots.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots/Dots.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots/Dots.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots/Dots.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots/Dots.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Dots/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedFlat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedFlat/DiffuseNoTextureDoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedFlat/DiffuseNoTextureDoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedFlat/DoubleTaperedFlat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedFlat/DoubleTaperedFlat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedFlat/DoubleTaperedFlat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedFlat/DoubleTaperedFlat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedMarker.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedMarker/DoubleTaperedMarker.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedMarker/DoubleTaperedMarker.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedMarker/DoubleTaperedMarker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedMarker/DoubleTaperedMarker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedMarker/DoubleTaperedMarker.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DoubleTaperedMarker/DoubleTaperedMarker.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape/DuctTape.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape/DuctTape.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape/DuctTape.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape/DuctTape.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape/normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTape/normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTapeSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTapeSingleSided/DuctTapeSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTapeSingleSided/DuctTapeSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTapeSingleSided/DuctTapeSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/DuctTapeSingleSided/DuctTapeSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Electricity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Electricity/Electricity.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Electricity/Electricity.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Electricity/Electricity.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Electricity/Electricity.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Electricity/Electricity.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Electricity/Electricity.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers/Embers.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers/Embers.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers/Embers.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers/Embers.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers/Embers.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers/Embers.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Embers/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire/Fire.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire/Fire.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire/Fire.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire/Fire.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire/Fire.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire/Fire.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire/fire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Fire/fire.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Flat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Flat/Flat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Flat/Flat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Flat/Flat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Flat/Flat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatDeprecated.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatDeprecated/FlatDeprecated.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatDeprecated/FlatDeprecated.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatDeprecated/FlatDeprecated.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatDeprecated/FlatDeprecated.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatSingleSided/FlatSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatSingleSided/FlatSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatSingleSided/FlatSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/FlatSingleSided/FlatSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter/AdditiveCutout.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter/AdditiveCutout.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter/Highlighter.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter/Highlighter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter/Highlighter.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter/Highlighter.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Highlighter/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid/HyperGrid.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid/HyperGrid.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid/HyperGrid.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid/HyperGrid.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid/HyperGrid.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid/HyperGrid.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HyperGrid/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/Hypercolor.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/Hypercolor.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/Hypercolor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/Hypercolor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/HypercolorDoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/HypercolorDoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/HypercolorSingleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/HypercolorSingleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Hypercolor/normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HypercolorSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HypercolorSingleSided/HypercolorSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HypercolorSingleSided/HypercolorSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HypercolorSingleSided/HypercolorSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/HypercolorSingleSided/HypercolorSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Icing.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Icing/Icing_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Icing/Icing_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Icing/Icing_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Icing/Icing_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Icing/normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Icing/normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink/Ink.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink/Ink.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink/Ink.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink/Ink.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink/maintexture_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Ink/maintexture_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/InkSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/InkSingleSided/InkSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/InkSingleSided/InkSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/InkSingleSided/InkSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/InkSingleSided/InkSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves/Leaves.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves/Leaves.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves/Leaves.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves/Leaves.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves/leaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves/leaves.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves/normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Leaves/normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LeavesSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LeavesSingleSided/LeavesSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LeavesSingleSided/LeavesSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LeavesSingleSided/LeavesSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LeavesSingleSided/LeavesSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Light.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Light/Light.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Light/Light.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Light/Light.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Light/Light.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Light/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Light/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire/LightWire.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire/LightWire.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire/LightWire.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire/LightWire.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire/LightWire.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire/LightWire.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/LightWire/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Lofted.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Lofted/Lofted_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Lofted/Lofted_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Lofted/Lofted_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Lofted/Lofted_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Marker.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Marker/Marker.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Marker/Marker.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Marker/Marker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Marker/Marker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Marker/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Marker/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/MatteHull.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/MatteHull/MatteHull_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/MatteHull/MatteHull_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/MatteHull/MatteHull_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/MatteHull/MatteHull_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/NeonPulse.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/NeonPulse/NeonPulse.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/NeonPulse/NeonPulse.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/NeonPulse/NeonPulse.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/NeonPulse/NeonPulse.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint/OilPaint.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint/OilPaint.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint/OilPaint.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint/OilPaint.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint/normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaint/normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaintSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaintSingleSided/OilPaintSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaintSingleSided/OilPaintSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaintSingleSided/OilPaintSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/OilPaintSingleSided/OilPaintSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper/Paper.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper/Paper.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper/Paper.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper/Paper.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper/bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper/bump.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Paper/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/PaperSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/PaperSingleSided/PaperSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/PaperSingleSided/PaperSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/PaperSingleSided/PaperSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/PaperSingleSided/PaperSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Petal.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Petal/Petal.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Petal/Petal.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Petal/Petal_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Petal/Petal_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Petal/Petal_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Petal/Petal_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma/Plasma.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma/Plasma.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma/Plasma.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma/Plasma.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma/Plasma.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma/Plasma.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Plasma/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Rainbow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Rainbow/Rainbow.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Rainbow/Rainbow.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Rainbow/Rainbow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Rainbow/Rainbow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Rainbow/Rainbow.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Rainbow/Rainbow.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ShinyHull.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ShinyHull/ShinyHull_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ShinyHull/ShinyHull_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ShinyHull/ShinyHull_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ShinyHull/ShinyHull_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke/Smoke.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke/Smoke.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke/Smoke.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke/Smoke.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke/Smoke.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke/Smoke.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Smoke/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow/Snow.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow/Snow.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow/Snow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow/Snow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow/Snow.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow/Snow.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Snow/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter/SoftHighlighter.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter/SoftHighlighter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter/SoftHighlighter.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter/SoftHighlighter.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter/SoftHighlighter.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter/SoftHighlighter.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SoftHighlighter/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Spikes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Spikes/Spikes_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Spikes/Spikes_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Spikes/Spikes_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Spikes/Spikes_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Splatter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Splatter/Splatter.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Splatter/Splatter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Splatter/Splatter.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Splatter/Splatter.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Splatter/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Splatter/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SplatterSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SplatterSingleSided/SplatterSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SplatterSingleSided/SplatterSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SplatterSingleSided/SplatterSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/SplatterSingleSided/SplatterSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars/Stars.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars/Stars.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars/Stars.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars/Stars.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars/Stars.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars/Stars.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Stars/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers/Streamers.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers/Streamers.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers/Streamers.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers/Streamers.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers/Streamers.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers/Streamers.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Streamers/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Taffy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Taffy/Taffy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Taffy/Taffy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Taffy/Taffy.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Taffy/Taffy.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Taffy/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Taffy/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlat/TaperedFlat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlat/TaperedFlat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlat/TaperedFlat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlat/TaperedFlat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlat/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlat/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlatSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlatSingleSided/TaperedFlatSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlatSingleSided/TaperedFlatSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlatSingleSided/TaperedFlatSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedFlatSingleSided/TaperedFlatSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker/TaperedMarker.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker/TaperedMarker.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker/TaperedMarker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker/TaperedMarker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker_Flat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker_Flat/TaperedMarker_Flat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker_Flat/TaperedMarker_Flat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker_Flat/TaperedMarker_Flat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/TaperedMarker_Flat/TaperedMarker_Flat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint/ThickPaint.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint/ThickPaint.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint/ThickPaint.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint/ThickPaint.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint/streakystroke.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint/streakystroke.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint/streakystroke_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaint/streakystroke_bump.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaintSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaintSingleSided/ThickPaintSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaintSingleSided/ThickPaintSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaintSingleSided/ThickPaintSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/ThickPaintSingleSided/ThickPaintSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Toon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Toon/Toon.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Toon/Toon.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Toon/Toon.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Toon/Toon.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Toon/Toon.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Toon/Toon.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/UnlitHull.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/UnlitHull/UnlitHull_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/UnlitHull/UnlitHull_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/UnlitHull/UnlitHull_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/UnlitHull/UnlitHull_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk/VelvetInk.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk/VelvetInk.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk/VelvetInk.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk/VelvetInk.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk/VelvetInk.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk/VelvetInk.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk/maintexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/VelvetInk/maintexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform/Waveform.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform/Waveform.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform/Waveform.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform/Waveform.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform/Waveform.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform/Waveform.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform/waveform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Waveform/waveform.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WaveformPulse.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WaveformPulse/NeonPulse.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WaveformPulse/NeonPulse.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WaveformPulse/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WaveformPulse/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint/WetPaint_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint/WetPaint_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint/WetPaint_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint/WetPaint_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint/normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaint/normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaintSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaintSingleSided/WetPaintSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaintSingleSided/WetPaintSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaintSingleSided/WetPaintSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WetPaintSingleSided/WetPaintSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite/WigglyGraphiteDoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite/WigglyGraphiteDoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite/WigglyGraphite_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite/WigglyGraphite_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite/WigglyGraphite_16.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite/WigglyGraphite_16.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite/main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphite/main.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphiteSingleSided.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphiteSingleSided/WigglyGraphiteSingleSided.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphiteSingleSided/WigglyGraphiteSingleSided.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphiteSingleSided/WigglyGraphiteSingleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/WigglyGraphiteSingleSided/WigglyGraphiteSingleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Wire.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Wire/Wire.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Wire/Wire.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Wire/Wire.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Basic/Wire/Wire.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem/BlocksGem.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem/BlocksGem.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem/BlocksGem.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem/BlocksGem.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem/BlocksGem.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem/BlocksGem.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem/BlocksGemPT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGem/BlocksGemPT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass/BlocksGlass.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass/BlocksGlass.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass/BlocksGlass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass/BlocksGlass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass/BlocksGlass.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass/BlocksGlass.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass/BlocksGlassPT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksGlass/BlocksGlassPT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksPaper.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksPaper/BlocksPaper.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksPaper/BlocksPaper.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksPaper/BlocksPaper.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksPaper/BlocksPaper.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksPaper/BlocksPaper.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Blocks/BlocksPaper/BlocksPaper.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Poly.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Poly/PbrTemplate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Poly/PbrTemplate/PbrTemplate.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Poly/PbrTemplate/PbrTemplate.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Poly/PbrTransparentTemplate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Poly/PbrTransparentTemplate/PbrTransparentTemplate.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Poly/PbrTransparentTemplate/PbrTransparentTemplate.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/Bloom.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/Bloom.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/DiffuseDoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/DiffuseDoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/DiffuseOpaqueDoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/DiffuseOpaqueDoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/DiffuseOpaqueSingleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/DiffuseOpaqueSingleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/DiffuseSingleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/DiffuseSingleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/StandardDoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/StandardDoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/StandardSingleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/StandardSingleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/Unlit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Brushes/Shared/Shaders/Unlit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Scripts/BrushDescriptor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Scripts/BrushDescriptor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Scripts/BrushManifest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Scripts/BrushManifest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Scripts/SerializableGuid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Scripts/SerializableGuid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Shaders/Include.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Shaders/Include/Brush.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Shaders/Include/Brush.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Shaders/Include/Particles.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Shaders/Include/Particles.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Shaders/Unlit-Diffuse.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tbt/Shaders/Unlit-Diffuse.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tests.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tests/TestRuntimeImport.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Internal/tests/TestRuntimeImport.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Materials/BasePbrBlendDoubleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Materials/BasePbrBlendDoubleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Materials/BasePbrOpaqueDoubleSided.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Materials/BasePbrOpaqueDoubleSided.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Prefabs/PolyToolkitManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Prefabs/PolyToolkitManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Resources/PtSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Resources/PtSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyConfigTypes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyConfigTypes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyImportOptions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyImportOptions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyToolkitManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyToolkitManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyTypes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PolyTypes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PtAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PtAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PtAssetObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Scripts/PtAssetObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Shaders/PolyToolkitPbrBlendDoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Shaders/PolyToolkitPbrBlendDoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Shaders/PolyToolkitPbrOpaqueDoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/Shaders/PolyToolkitPbrOpaqueDoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/Shader/BlocksGemGPUVoronoiNoise.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/Shader/BlocksGemGPUVoronoiNoise.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/VoronoNoise2D.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/VoronoNoise2D.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/VoronoNoise3D.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/VoronoNoise3D.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/VoronoNoise4D.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/Assets/GPUVoronoiNoise/VoronoNoise4D.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/LICENSE.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/METADATA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/GPU-Voronoi-Noise/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/AOT.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/AOT/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/AOT/Newtonsoft.Json.XML.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/AOT/Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Standalone.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Standalone/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Standalone/Newtonsoft.Json.XML.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Standalone/Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Windows/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Windows/Newtonsoft.Json.XML.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Windows/Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/LICENSE.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/METADATA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/LICENSE.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/METADATA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/README.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/Shaders/Noise.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/ThirdParty/Noise/Shaders/Noise.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/poly_toolkit_manifest.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyToolkit/poly_toolkit_manifest.dat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,17 +889,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="435">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
               <folding>
-                <marker date="1539027629364" expanded="true" signature="26:2159" ph="{...}" />
-                <marker date="1539027629364" expanded="true" signature="40:430" ph="{...}" />
-                <marker date="1539027629364" expanded="true" signature="442:2131" ph="{...}" />
-                <marker date="1539027629364" expanded="true" signature="451:517" ph="{...}" />
-                <marker date="1539027629364" expanded="true" signature="532:2123" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
+                <marker date="1538661677071" expanded="false" signature="125:163" ph="..." />
+                <marker date="1538661677071" expanded="true" signature="2100:2387" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="2412:6430" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="2787:5506" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="2835:3038" ph="/* See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit ... */" />
+                <marker date="1538661677071" expanded="true" signature="3129:3252" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="3265:3479" ph="/* However, just raycasting straight down from the center can fail when on steep slopes ... */" />
+                <marker date="1538661677071" expanded="true" signature="3479:3702" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="3854:4070" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="4104:4199" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="4448:4755" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="4876:5152" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="5405:5496" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="5506:6132" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="5647:5751" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="5888:6122" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="6573:6614" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="6621:6818" ph="/* If falling damage occured, this is the place to do something about it. You can make the player ... */" />
+                <marker date="1538661677071" expanded="true" signature="6867:6942" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -123,61 +932,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PulsatingGlow.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state>
               <folding>
-                <marker date="1539023906356" expanded="false" signature="6:78" ph="..." />
-                <marker date="1539023906356" expanded="true" signature="122:857" ph="{...}" />
-                <marker date="1539023906356" expanded="true" signature="386:608" ph="{...}" />
-                <marker date="1539023906356" expanded="true" signature="662:855" ph="{...}" />
+                <marker date="1539024835607" expanded="false" signature="6:78" ph="..." />
+                <marker date="1539024835607" expanded="true" signature="122:857" ph="{...}" />
+                <marker date="1539024835607" expanded="true" signature="386:608" ph="{...}" />
+                <marker date="1539024835607" expanded="true" signature="662:855" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-              <folding>
-                <marker date="1538617220000" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
-                <marker date="1538617220000" expanded="false" signature="125:163" ph="..." />
-                <marker date="1538617220000" expanded="true" signature="2100:2387" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="2412:6430" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="2787:5506" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="2835:3038" ph="/* See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit ... */" />
-                <marker date="1538617220000" expanded="true" signature="3129:3252" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="3265:3479" ph="/* However, just raycasting straight down from the center can fail when on steep slopes ... */" />
-                <marker date="1538617220000" expanded="true" signature="3479:3702" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="3854:4070" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="4104:4199" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="4448:4755" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="4876:5152" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="5405:5496" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="5506:6132" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="5647:5751" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="5888:6122" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="6573:6614" ph="{...}" />
-                <marker date="1538617220000" expanded="true" signature="6621:6818" ph="/* If falling damage occured, this is the place to do something about it. You can make the player ... */" />
-                <marker date="1538617220000" expanded="true" signature="6867:6942" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="375">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding>
-                <marker date="1390349004000" expanded="false" signature="25:63" ph="..." />
-                <marker date="1390349004000" expanded="true" signature="120:146" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="165:463" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="270:308" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="396:457" ph="{...}" />
-                <marker date="1390349004000" expanded="true" signature="512:561" ph="{...}" />
+                <marker date="1538661677071" expanded="false" signature="25:63" ph="..." />
+                <marker date="1538661677071" expanded="true" signature="103:563" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="120:146" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="165:463" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="270:308" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="396:457" ph="{...}" />
+                <marker date="1538661677071" expanded="true" signature="512:561" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -194,11 +972,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PulsatingGlow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -302,7 +1080,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9207000" />
+    <option name="totallyTimeSpent" value="9632000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -314,9 +1092,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="808" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08255033" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17381974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -328,12 +1106,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32765958" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49928468" visible="true" weight="0.32681563" />
       <window_info anchor="bottom" id="Unity" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32681563" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -375,44 +1153,45 @@
     <entry file="file://$PROJECT_DIR$/Assets/Shaders/GroundGradient.shader" />
     <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="375">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding>
-            <marker date="1390349004000" expanded="false" signature="25:63" ph="..." />
-            <marker date="1390349004000" expanded="true" signature="120:146" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="165:463" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="270:308" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="396:457" ph="{...}" />
-            <marker date="1390349004000" expanded="true" signature="512:561" ph="{...}" />
+            <marker date="1538661677071" expanded="false" signature="25:63" ph="..." />
+            <marker date="1538661677071" expanded="true" signature="103:563" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="120:146" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="165:463" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="270:308" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="396:457" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="512:561" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
+        <state relative-caret-position="780">
           <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
           <folding>
-            <marker date="1538617220000" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
-            <marker date="1538617220000" expanded="false" signature="125:163" ph="..." />
-            <marker date="1538617220000" expanded="true" signature="2100:2387" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="2412:6430" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="2787:5506" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="2835:3038" ph="/* See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit ... */" />
-            <marker date="1538617220000" expanded="true" signature="3129:3252" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="3265:3479" ph="/* However, just raycasting straight down from the center can fail when on steep slopes ... */" />
-            <marker date="1538617220000" expanded="true" signature="3479:3702" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="3854:4070" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="4104:4199" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="4448:4755" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="4876:5152" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="5405:5496" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="5506:6132" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="5647:5751" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="5888:6122" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="6573:6614" ph="{...}" />
-            <marker date="1538617220000" expanded="true" signature="6621:6818" ph="/* If falling damage occured, this is the place to do something about it. You can make the player ... */" />
-            <marker date="1538617220000" expanded="true" signature="6867:6942" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
+            <marker date="1538661677071" expanded="false" signature="125:163" ph="..." />
+            <marker date="1538661677071" expanded="true" signature="2100:2387" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="2412:6430" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="2787:5506" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="2835:3038" ph="/* See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit ... */" />
+            <marker date="1538661677071" expanded="true" signature="3129:3252" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="3265:3479" ph="/* However, just raycasting straight down from the center can fail when on steep slopes ... */" />
+            <marker date="1538661677071" expanded="true" signature="3479:3702" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="3854:4070" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="4104:4199" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="4448:4755" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="4876:5152" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="5405:5496" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="5506:6132" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="5647:5751" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="5888:6122" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="6573:6614" ph="{...}" />
+            <marker date="1538661677071" expanded="true" signature="6621:6818" ph="/* If falling damage occured, this is the place to do something about it. You can make the player ... */" />
+            <marker date="1538661677071" expanded="true" signature="6867:6942" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -426,27 +1205,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <marker date="1539027629364" expanded="true" signature="26:2159" ph="{...}" />
-            <marker date="1539027629364" expanded="true" signature="40:430" ph="{...}" />
-            <marker date="1539027629364" expanded="true" signature="442:2131" ph="{...}" />
-            <marker date="1539027629364" expanded="true" signature="451:517" ph="{...}" />
-            <marker date="1539027629364" expanded="true" signature="532:2123" ph="{...}" />
-          </folding>
+        <state relative-caret-position="435">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PulsatingGlow.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state>
           <folding>
-            <marker date="1539023906356" expanded="false" signature="6:78" ph="..." />
-            <marker date="1539023906356" expanded="true" signature="122:857" ph="{...}" />
-            <marker date="1539023906356" expanded="true" signature="386:608" ph="{...}" />
-            <marker date="1539023906356" expanded="true" signature="662:855" ph="{...}" />
+            <marker date="1539024835607" expanded="false" signature="6:78" ph="..." />
+            <marker date="1539024835607" expanded="true" signature="122:857" ph="{...}" />
+            <marker date="1539024835607" expanded="true" signature="386:608" ph="{...}" />
+            <marker date="1539024835607" expanded="true" signature="662:855" ph="{...}" />
           </folding>
         </state>
       </provider>
