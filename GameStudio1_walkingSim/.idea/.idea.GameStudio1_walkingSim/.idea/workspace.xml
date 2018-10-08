@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="df86b96d-9484-47e3-8f9a-2e2a85d67cbb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameStudio1_walkingSim/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameStudio1_walkingSim/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat_Building.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat_Building.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat_Prop.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/VerticalFogMat_Prop.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,30 +104,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="246">
+              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
               <folding>
-                <marker date="1538621344000" expanded="true" signature="40:430" ph="{...}" />
-                <marker date="1538621344000" expanded="true" signature="442:2131" ph="{...}" />
-                <marker date="1538621344000" expanded="true" signature="451:517" ph="{...}" />
-                <marker date="1538621344000" expanded="true" signature="532:2123" ph="{...}" />
+                <marker date="1539027629364" expanded="true" signature="26:2159" ph="{...}" />
+                <marker date="1539027629364" expanded="true" signature="40:430" ph="{...}" />
+                <marker date="1539027629364" expanded="true" signature="442:2131" ph="{...}" />
+                <marker date="1539027629364" expanded="true" signature="451:517" ph="{...}" />
+                <marker date="1539027629364" expanded="true" signature="532:2123" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PulsatingGlow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding>
+                <marker date="1539023906356" expanded="false" signature="6:78" ph="..." />
+                <marker date="1539023906356" expanded="true" signature="122:857" ph="{...}" />
+                <marker date="1539023906356" expanded="true" signature="386:608" ph="{...}" />
+                <marker date="1539023906356" expanded="true" signature="662:855" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
+            <state relative-caret-position="884">
               <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
               <folding>
                 <marker date="1538617220000" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
                 <marker date="1538617220000" expanded="false" signature="125:163" ph="..." />
-                <marker date="1538617220000" expanded="true" signature="261:6944" ph="{...}" />
                 <marker date="1538617220000" expanded="true" signature="2100:2387" ph="{...}" />
                 <marker date="1538617220000" expanded="true" signature="2412:6430" ph="{...}" />
                 <marker date="1538617220000" expanded="true" signature="2787:5506" ph="{...}" />
@@ -214,13 +233,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8600000" />
+    <option name="totallyTimeSpent" value="9207000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -296,9 +315,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08187919" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08255033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -310,7 +328,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32839313" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32765958" />
       <window_info anchor="bottom" id="Unity" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
@@ -372,12 +390,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
+        <state relative-caret-position="884">
           <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
           <folding>
             <marker date="1538617220000" expanded="true" signature="0:117" ph="/* original by Eric Haines (Eric5h5) ... */" />
             <marker date="1538617220000" expanded="false" signature="125:163" ph="..." />
-            <marker date="1538617220000" expanded="true" signature="261:6944" ph="{...}" />
             <marker date="1538617220000" expanded="true" signature="2100:2387" ph="{...}" />
             <marker date="1538617220000" expanded="true" signature="2412:6430" ph="{...}" />
             <marker date="1538617220000" expanded="true" signature="2787:5506" ph="{...}" />
@@ -409,13 +426,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Shaders/GroundFogTest.shader">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="246">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
           <folding>
-            <marker date="1538621344000" expanded="true" signature="40:430" ph="{...}" />
-            <marker date="1538621344000" expanded="true" signature="442:2131" ph="{...}" />
-            <marker date="1538621344000" expanded="true" signature="451:517" ph="{...}" />
-            <marker date="1538621344000" expanded="true" signature="532:2123" ph="{...}" />
+            <marker date="1539027629364" expanded="true" signature="26:2159" ph="{...}" />
+            <marker date="1539027629364" expanded="true" signature="40:430" ph="{...}" />
+            <marker date="1539027629364" expanded="true" signature="442:2131" ph="{...}" />
+            <marker date="1539027629364" expanded="true" signature="451:517" ph="{...}" />
+            <marker date="1539027629364" expanded="true" signature="532:2123" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -424,6 +442,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <marker date="1539023906356" expanded="false" signature="6:78" ph="..." />
+            <marker date="1539023906356" expanded="true" signature="122:857" ph="{...}" />
+            <marker date="1539023906356" expanded="true" signature="386:608" ph="{...}" />
+            <marker date="1539023906356" expanded="true" signature="662:855" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
