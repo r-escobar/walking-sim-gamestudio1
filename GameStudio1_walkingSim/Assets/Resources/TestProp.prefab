@@ -87,7 +87,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 5275fc78afebf31418ffbe17198f0755, type: 2}
+  - {fileID: 2100000, guid: 0c82a36f36c88e548b12de246a7adbd2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +113,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517827417512596}
-  m_Mesh: {fileID: 4300000, guid: de4e2e8cfe33e2243b2b531e5daf20b0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bc92b668847647549ae324511ab89e87, type: 3}
 --- !u!65 &65198094254176604
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331716898778790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 777ea1265705f014595139317f3ea4a8, type: 3}
+  m_Script: {fileID: 11500000, guid: add7a651cf1d99d4dac9efc07c99b1ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   glowAmount: 0.15
