@@ -36,9 +36,14 @@
          float3 normal;
 		};
 
+        float rand(float3 co)
+        {
+            return frac(sin( dot(co.xyz ,float3(12.9898,78.233,45.5432) )) * 43758.5453);
+        }
+
 		void surf (Input IN, inout SurfaceOutput o) {
          // gradient color at this height
-         half3 gradient = lerp(_ColorLow, _ColorHigh,  smoothstep( _yPosLow, _yPosHigh, IN.worldPos.y )).rgb;
+         half3 gradient = lerp(_ColorLow, _ColorHigh,  smoothstep( _yPosLow, _yPosHigh, IN.worldPos.y ) + (0.005f * rand(IN.worldPos))).rgb;
          
          // lerp the 
          gradient = lerp(WHITE3, gradient, _GradientStrength);
@@ -53,7 +58,13 @@
          // add the gradient color
          //finalColor += gradient;
          
+         
+         
          half3 finalColor = gradient;
+         
+//         if(IN.worldPos.y >= 0.1f) {
+//             finalColor += (0.005f * rand(IN.worldPos));
+//         }
          
          // scale down to 0-1 values
          finalColor = saturate(finalColor);
