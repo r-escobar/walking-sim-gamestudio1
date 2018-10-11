@@ -27,6 +27,24 @@ public class PickUpObject : MonoBehaviour
 				if (hit.collider.tag == "CanPickup")
 				{
 					Debug.Log("player is trying to pick up a " + hit.collider.name);
+					hit.collider.gameObject.layer = 9;
+				}
+			}
+
+		}
+		
+		if (Input.GetMouseButtonDown(1))
+		{
+			Vector3 rayOrigin = fpCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0f));
+			RaycastHit hit;
+			if (Physics.Raycast(rayOrigin, fpCamera.transform.forward, out hit, pickupRange))
+			{	
+//				if(hit.collider != null)
+//					Debug.Log("player clicked " + hit.collider.name);
+				if (hit.collider.tag == "CanPickup")
+				{
+					Debug.Log("player is trying to put down a " + hit.collider.name);
+					hit.collider.gameObject.layer = 0;
 				}
 			}
 
