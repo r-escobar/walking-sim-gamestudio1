@@ -32,7 +32,7 @@ public class HeadBob : MonoBehaviour
 	          timer = timer - (Mathf.PI * 2f); 
 	       }
 
-		    if (Mathf.Abs(timer - Mathf.PI * 1.5f) <= 0.08f)
+		    if (Mathf.Abs(timer - Mathf.PI * 1.5f) <= 0.02f)
 		    {
 			    StartFootStep();
 		    }
