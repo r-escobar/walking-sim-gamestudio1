@@ -10,6 +10,8 @@ public class FirstPersonDrifter: MonoBehaviour
 {
     public float walkSpeed = 6.0f;
     public float runSpeed = 10.0f;
+
+    private bool isFrozen = false;
  
     // If true, diagonal speed (when strafing + moving forward or back) can't exceed normal move speed; otherwise it's about 1.4 times faster
     private bool limitDiagonalSpeed = true;
@@ -63,7 +65,11 @@ public class FirstPersonDrifter: MonoBehaviour
         jumpTimer = antiBunnyHopFactor;
     }
  
-    void LateUpdate() {
+    void LateUpdate()
+    {
+        if (isFrozen)
+            return;
+        
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
         // If both horizontal and vertical are used simultaneously, limit speed (if allowed), so the total doesn't exceed normal move speed
@@ -140,6 +146,16 @@ public class FirstPersonDrifter: MonoBehaviour
  
         // Move the controller, and set grounded true or false depending on whether we're standing on something
         grounded = (controller.Move(moveDirection * Time.deltaTime) & CollisionFlags.Below) != 0;
+    }
+
+    public void FreezeMovement()
+    {
+        isFrozen = true;
+    }
+    
+    public void UnfreezeMovement()
+    {
+        isFrozen = false;
     }
  
     // Store point that we're in contact with for use in FixedUpdate if needed

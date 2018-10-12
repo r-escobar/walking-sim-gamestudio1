@@ -19,6 +19,9 @@ public class MouseLook : MonoBehaviour
 	
 	public float sensitivityX = 10F;
 	public float sensitivityY = 9F;
+
+	private float startingSensX;
+	private float startingSensY;
  
 	public float minimumX = -360F;
 	public float maximumX = 360F;
@@ -47,6 +50,9 @@ public class MouseLook : MonoBehaviour
 		}
 		
 		originalRotation = transform.localRotation;
+
+		startingSensX = sensitivityX;
+		startingSensY = sensitivityY;
 	}
  
 	void Update ()
@@ -107,6 +113,12 @@ public class MouseLook : MonoBehaviour
 	{
 		sensitivityX = s;
 		sensitivityY = s;
+	}
+	
+	public void ResetSensitivity()
+	{
+		sensitivityX = startingSensX;
+		sensitivityY = startingSensY;
 	}
  
 	public static float ClampAngle (float angle, float min, float max)

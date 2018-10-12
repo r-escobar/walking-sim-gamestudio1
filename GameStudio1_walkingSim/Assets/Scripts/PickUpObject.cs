@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUpObject : MonoBehaviour
 {
-
+	
 	public Camera fpCamera;
+	public Image curorImage;
+	public MouseLook mouseLookX;
+	public MouseLook mouseLookY;
+	public FirstPersonDrifter fpController;
+	public BlurFader blurFader;
+
 	public float pickupRange = 1f;
+	public Vector3 inspectPos = new Vector3(0f, 0f, 2f);
+	public float minInspectDuration = 0.25f;
 	
 	// Use this for initialization
 	void Start () {
@@ -22,32 +32,53 @@ public class PickUpObject : MonoBehaviour
 			RaycastHit hit;
 			if (Physics.Raycast(rayOrigin, fpCamera.transform.forward, out hit, pickupRange))
 			{	
-//				if(hit.collider != null)
-//					Debug.Log("player clicked " + hit.collider.name);
 				if (hit.collider.tag == "CanPickup")
 				{
-					Debug.Log("player is trying to pick up a " + hit.collider.name);
-					hit.collider.gameObject.layer = 9;
+					ObjectController objScript = hit.collider.gameObject.GetComponent<ObjectController>();
+
+					if (objScript)
+					{
+						if (!objScript.inspectMode)
+						{
+							objScript.StartInspectingObject(inspectPos, transform);
+							mouseLookX.SetSensitivity(0f);
+							mouseLookY.SetSensitivity(0f);
+							fpController.FreezeMovement();
+							blurFader.BlurFadeIn();
+							curorImage.enabled = false;
+						}
+						else if(objScript.inspectTimer >= minInspectDuration)
+						{
+							objScript.StopInspectingObject();
+							mouseLookX.ResetSensitivity();
+							mouseLookY.ResetSensitivity();
+							fpController.UnfreezeMovement();
+							blurFader.BlurFadeOut();
+							curorImage.enabled = true;
+						}
+					}
+					else
+					{
+						Debug.LogError("object does not have an attached ObjectController!");
+					}
 				}
 			}
 
 		}
 		
-		if (Input.GetMouseButtonDown(1))
-		{
-			Vector3 rayOrigin = fpCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0f));
-			RaycastHit hit;
-			if (Physics.Raycast(rayOrigin, fpCamera.transform.forward, out hit, pickupRange))
-			{	
-//				if(hit.collider != null)
-//					Debug.Log("player clicked " + hit.collider.name);
-				if (hit.collider.tag == "CanPickup")
-				{
-					Debug.Log("player is trying to put down a " + hit.collider.name);
-					hit.collider.gameObject.layer = 0;
-				}
-			}
-
-		}
+//		if (Input.GetMouseButtonDown(1))
+//		{
+//			Vector3 rayOrigin = fpCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0f));
+//			RaycastHit hit;
+//			if (Physics.Raycast(rayOrigin, fpCamera.transform.forward, out hit, pickupRange))
+//			{	
+//				if (hit.collider.tag == "CanPickup")
+//				{
+//					Debug.Log("player is trying to put down a " + hit.collider.name);
+//					hit.collider.gameObject.layer = 0;
+//				}
+//			}
+//
+//		}
 	}
 }
