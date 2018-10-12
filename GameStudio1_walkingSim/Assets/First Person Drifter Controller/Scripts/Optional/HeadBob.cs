@@ -11,7 +11,7 @@ public class HeadBob : MonoBehaviour
 	public float bobbingAmount = 0.05f; 
 	public float  midpoint = 0.6f; 
 	
-	private float timer = 0.0f; 
+	private float timer = 0.0f;
  
 	void Update ()
 	{ 
@@ -30,7 +30,12 @@ public class HeadBob : MonoBehaviour
 	       if (timer > Mathf.PI * 2f)
 	       { 
 	          timer = timer - (Mathf.PI * 2f); 
-	       } 
+	       }
+
+		    if (Mathf.Abs(timer - Mathf.PI * 1.5f) <= 0.08f)
+		    {
+			    StartFootStep();
+		    }
 	    } 
 	    if (waveslice != 0f)
 	    { 
@@ -49,5 +54,11 @@ public class HeadBob : MonoBehaviour
 	    	localPos.y = midpoint; 
 	    	transform.localPosition = localPos;
 	    } 
+	}
+
+	void StartFootStep()
+	{
+		if(GetComponentInParent<FootstepParticleControllerTammy> () != null)
+			GetComponentInParent<FootstepParticleControllerTammy> ().StartStep();
 	}
 }
