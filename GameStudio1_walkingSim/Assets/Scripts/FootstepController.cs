@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FootstepParticleControllerTammy : MonoBehaviour
+public class FootstepController : MonoBehaviour
 {
 
 	public ParticleSystem partSys;
+	public AudioSource audSrc;
 
 	public void StartStep()
 	{
 		partSys.transform.position = new Vector3(transform.position.x, 0.001f, transform.position.z);
 		partSys.Play();
-		GetComponent<AudioSource>().Play();	
+		audSrc.Play();	
 	}
 	
 }

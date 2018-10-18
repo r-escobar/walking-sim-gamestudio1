@@ -9,21 +9,24 @@ public class HeadBob : MonoBehaviour
 {	
 	public float bobbingSpeed = 0.25f; 
 	public float bobbingAmount = 0.05f; 
-	public float  midpoint = 0.6f; 
+	public float  midpoint = 0.6f;
+
+	public FootstepController footstepScript;
 	
-	public float timer = 0.0f;
-	public float waveslice;
+	private float timer = 0.0f;
+	private float waveslice;
  
 	void Update ()
 	{ 
 	    waveslice = 0.0f; 
-	    float horizontal = Input.GetAxis("Horizontal"); 
-	    float vertical = Input.GetAxis("Vertical"); 
+	    float horizontal = Input.GetAxisRaw("Horizontal"); 
+	    float vertical = Input.GetAxisRaw("Vertical"); 
 	    
 	    if (Mathf.Abs(horizontal) == 0f && Mathf.Abs(vertical) == 0f)
 	    { 
 	       //timer = 0.0f; 
-	    } 
+		    //Debug.Log("no input");
+	    }
 	    else
 	    { 
 	       waveslice = Mathf.Sin(timer); 
@@ -59,7 +62,7 @@ public class HeadBob : MonoBehaviour
 
 	void StartFootStep()
 	{
-		if(GetComponentInParent<FootstepParticleControllerTammy> () != null)
-			GetComponentInParent<FootstepParticleControllerTammy> ().StartStep();
+		if(footstepScript != null)
+			footstepScript.StartStep();
 	}
 }

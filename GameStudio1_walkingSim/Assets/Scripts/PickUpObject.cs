@@ -8,7 +8,7 @@ public class PickUpObject : MonoBehaviour
 {
 	
 	public Camera fpCamera;
-	public Image curorImage;
+	public Image cursorImage;
 	public MouseLook mouseLookX;
 	public MouseLook mouseLookY;
 	public FirstPersonDrifter fpController;
@@ -40,21 +40,23 @@ public class PickUpObject : MonoBehaviour
 					{
 						if (!objScript.inspectMode)
 						{
+							//Debug.Log("picking up " + objScript.gameObject.name);
 							objScript.StartInspectingObject(inspectPos, transform);
 							mouseLookX.SetSensitivity(0f);
 							mouseLookY.SetSensitivity(0f);
 							fpController.FreezeMovement();
 							blurFader.BlurFadeIn();
-							curorImage.enabled = false;
+							//cursorImage.enabled = false;
 						}
 						else if(objScript.inspectTimer >= minInspectDuration)
 						{
+							//Debug.Log("putting down " + objScript.gameObject.name);
 							objScript.StopInspectingObject();
 							mouseLookX.ResetSensitivity();
 							mouseLookY.ResetSensitivity();
 							fpController.UnfreezeMovement();
 							blurFader.BlurFadeOut();
-							curorImage.enabled = true;
+							//cursorImage.enabled = true;
 						}
 					}
 					else
