@@ -11,17 +11,18 @@ public class HeadBob : MonoBehaviour
 	public float bobbingAmount = 0.05f; 
 	public float  midpoint = 0.6f; 
 	
-	private float timer = 0.0f;
+	public float timer = 0.0f;
+	public float waveslice;
  
 	void Update ()
 	{ 
-	    float waveslice = 0.0f; 
+	    waveslice = 0.0f; 
 	    float horizontal = Input.GetAxis("Horizontal"); 
 	    float vertical = Input.GetAxis("Vertical"); 
 	    
 	    if (Mathf.Abs(horizontal) == 0f && Mathf.Abs(vertical) == 0f)
 	    { 
-	       timer = 0.0f; 
+	       //timer = 0.0f; 
 	    } 
 	    else
 	    { 
@@ -41,7 +42,7 @@ public class HeadBob : MonoBehaviour
 	    { 
 	       float translateChange = waveslice * bobbingAmount; 
 	       float totalAxes = Mathf.Abs(horizontal) + Mathf.Abs(vertical); 
-	       totalAxes = Mathf.Clamp (totalAxes, 0.0f, 1.0f); 
+		   totalAxes = Mathf.Clamp (totalAxes, 0.0f, 1.0f); 
 	       translateChange = totalAxes * translateChange;
 	       
 	       Vector3 localPos = transform.localPosition;
@@ -50,9 +51,9 @@ public class HeadBob : MonoBehaviour
 	    } 
 	    else
 	    { 
-	    	Vector3 localPos = transform.localPosition;
-	    	localPos.y = midpoint; 
-	    	transform.localPosition = localPos;
+//	    	Vector3 localPos = transform.localPosition;
+//	    	localPos.y = midpoint; 
+//	    	transform.localPosition = localPos;
 	    } 
 	}
 

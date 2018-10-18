@@ -25,7 +25,6 @@ public class FootstepParticleController : MonoBehaviour
 				partSys.transform.position = new Vector3(transform.position.x, 0.001f, transform.position.z);
 				partSys.Play();
 				
-				
 				//Invoke("ResetParticleSystem", rippleSpacing * 0.95f);
 				//Debug.Log("play ripple particles!");
 
