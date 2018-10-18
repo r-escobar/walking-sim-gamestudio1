@@ -47880,7 +47880,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: bobbingAmount
-      value: 0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_Layer
@@ -57648,6 +57648,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 198966711139966696, guid: dd1faa327d17ab04fb6710a19ca74034,
         type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198966711139966696, guid: dd1faa327d17ab04fb6710a19ca74034,
+        type: 2}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -57714,7 +57719,7 @@ Prefab:
     - target: {fileID: 198966711139966696, guid: dd1faa327d17ab04fb6710a19ca74034,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[3].countCurve.scalar
-      value: 30
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 198966711139966696, guid: dd1faa327d17ab04fb6710a19ca74034,
         type: 2}
@@ -57789,7 +57794,7 @@ Prefab:
     - target: {fileID: 198966711139966696, guid: dd1faa327d17ab04fb6710a19ca74034,
         type: 2}
       propertyPath: EmissionModule.m_Bursts.Array.data[3].countCurve.minScalar
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198966711139966696, guid: dd1faa327d17ab04fb6710a19ca74034,
         type: 2}
@@ -57945,6 +57950,16 @@ Prefab:
         type: 2}
       propertyPath: ColorModule.gradient.maxGradient.key0.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198966711139966696, guid: dd1faa327d17ab04fb6710a19ca74034,
+        type: 2}
+      propertyPath: EmissionModule.m_BurstCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198966711139966696, guid: dd1faa327d17ab04fb6710a19ca74034,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[3].time
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd1faa327d17ab04fb6710a19ca74034, type: 2}
