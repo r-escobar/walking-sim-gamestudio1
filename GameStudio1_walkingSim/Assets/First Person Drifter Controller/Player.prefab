@@ -525,6 +525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partSys: {fileID: 0}
   audSrc: {fileID: 82986036561180458}
+  footstepIgnoreTime: 0.2
 --- !u!114 &114605364567604822
 MonoBehaviour:
   m_ObjectHideFlags: 1
