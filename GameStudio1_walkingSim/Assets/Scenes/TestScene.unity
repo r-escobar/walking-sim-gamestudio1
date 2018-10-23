@@ -47662,41 +47662,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114870943398764420, guid: 25e3ab2d6992a48f3ab7455baed062e0,
-        type: 2}
-      propertyPath: curorImage
-      value: 
-      objectReference: {fileID: 1297351104}
-    - target: {fileID: 114580726226387774, guid: 25e3ab2d6992a48f3ab7455baed062e0,
-        type: 2}
-      propertyPath: partSys
-      value: 
-      objectReference: {fileID: 476098175}
     - target: {fileID: 114464895666948480, guid: 25e3ab2d6992a48f3ab7455baed062e0,
         type: 2}
       propertyPath: partSys
       value: 
       objectReference: {fileID: 476098175}
-    - target: {fileID: 82986036561180458, guid: 25e3ab2d6992a48f3ab7455baed062e0,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e3c92db5f72a7894b929e892e653adb6, type: 3}
-    - target: {fileID: 82986036561180458, guid: 25e3ab2d6992a48f3ab7455baed062e0,
-        type: 2}
-      propertyPath: m_Pitch
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114464895666948480, guid: 25e3ab2d6992a48f3ab7455baed062e0,
-        type: 2}
-      propertyPath: pitchVariation
-      value: 0.0375
-      objectReference: {fileID: 0}
-    - target: {fileID: 82986036561180458, guid: 25e3ab2d6992a48f3ab7455baed062e0,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
   m_IsPrefabAsset: 0
