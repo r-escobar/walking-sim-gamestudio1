@@ -5,16 +5,18 @@ using UnityEngine;
 public class PulsatingGlow : MonoBehaviour
 {
 
-	public float glowAmount = 0.1f;
+	public float glowAmount = 0.2f;
 	private float brightnessMin;
 	private float brightnessMax;
 
 	private float amp;
-	public float glowSpeed = 2f;
+	public float glowSpeed = 5f;
 	
 	public MeshRenderer mRend;
 	
 	private float startingBrightness;
+
+	public bool glow = true;
 	
 	// Use this for initialization
 	void Start () {
@@ -29,10 +31,24 @@ public class PulsatingGlow : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		float theta = Time.timeSinceLevelLoad * glowSpeed;
-		float brightnessChange = amp * Mathf.Sin(theta);
+		if (glow)
+		{
+			float theta = Time.timeSinceLevelLoad * glowSpeed;
+			float brightnessChange = amp * Mathf.Sin(theta);
 		
-		mRend.material.SetFloat("_yPosHigh", startingBrightness + brightnessChange);
+			mRend.material.SetFloat("_yPosHigh", startingBrightness + brightnessChange);
+		}
 
+	}
+
+	public void StopGlowing()
+	{
+		mRend.material.SetFloat("_yPosHigh", startingBrightness);
+		glow = false;
+	}
+
+	public void StartGlowing()
+	{
+		glow = true;
 	}
 }

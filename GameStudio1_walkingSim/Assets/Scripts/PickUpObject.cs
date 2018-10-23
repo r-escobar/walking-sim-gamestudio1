@@ -35,6 +35,7 @@ public class PickUpObject : MonoBehaviour
 				if (hit.collider.tag == "CanPickup")
 				{
 					ObjectController objScript = hit.collider.gameObject.GetComponent<ObjectController>();
+					PulsatingGlow glowScript = hit.collider.gameObject.GetComponent<PulsatingGlow>();
 
 					if (objScript)
 					{
@@ -48,6 +49,11 @@ public class PickUpObject : MonoBehaviour
 							blurFader.BlurFadeIn();
 							if(cursorImage)
 								cursorImage.enabled = false;
+
+							if (glowScript)
+							{
+								glowScript.StopGlowing();
+							}
 						}
 						else if(objScript.inspectTimer >= minInspectDuration)
 						{

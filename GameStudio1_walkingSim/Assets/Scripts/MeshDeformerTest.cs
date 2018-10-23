@@ -31,7 +31,7 @@ public class MeshDeformerTest : MonoBehaviour {
 			}
 			else
 			{
-				timeToNextGapCalc += Random.Range(0.75f, 1.25f);
+				timeToNextGapCalc += Random.Range(0.75f, 1.5f);
 			}
 
 			//timeToNextGapCalc += 1f;
