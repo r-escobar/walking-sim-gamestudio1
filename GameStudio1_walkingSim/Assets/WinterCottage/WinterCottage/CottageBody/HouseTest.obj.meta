@@ -1,26 +1,70 @@
 fileFormatVersion: 2
-guid: ce9b09fb23e5ed24d8308251bfff6479
+guid: bb10f0633db8f44aabd9abcea2e9cd11
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: GameBoy
-    100004: lector
-    400000: //RootNode
-    400002: GameBoy
-    400004: lector
-    2100000: GameBoyMat__gb_uv_jpg
-    2100002: Material_002__apple2_jpg
-    2100004: Material_002__apple2_jpg_001
-    2300000: GameBoy
-    2300002: lector
-    3300000: GameBoy
-    3300002: lector
-    4300000: GameBoy
-    4300002: lector
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    100000: Body_001_Plane_003
+    100002: Door2_Mesh_001
+    100004: Door3_Mesh_002
+    100006: Door4_Mesh_004
+    100008: Door5_Mesh_003
+    100010: //RootNode
+    100012: Plane
+    100014: Plane_001
+    100016: Plane_004_Plane_006
+    100018: Plane_005_Plane_007
+    100020: Plane_006_Plane_008
+    400000: Body_001_Plane_003
+    400002: Door2_Mesh_001
+    400004: Door3_Mesh_002
+    400006: Door4_Mesh_004
+    400008: Door5_Mesh_003
+    400010: //RootNode
+    400012: Plane
+    400014: Plane_001
+    400016: Plane_004_Plane_006
+    400018: Plane_005_Plane_007
+    400020: Plane_006_Plane_008
+    2100000: Body_001_Plane_003Mat
+    2100002: Door2_Mesh_001Mat
+    2100004: Door3_Mesh_002Mat
+    2100006: Door4_Mesh_004Mat
+    2100008: Door5_Mesh_003Mat
+    2100010: PlaneMat
+    2100012: Plane_001Mat
+    2100014: Plane_004_Plane_006Mat
+    2100016: Plane_005_Plane_007Mat
+    2100018: Plane_006_Plane_008Mat
+    2300000: Body_001_Plane_003
+    2300002: Door2_Mesh_001
+    2300004: Door3_Mesh_002
+    2300006: Door4_Mesh_004
+    2300008: Door5_Mesh_003
+    2300010: Plane
+    2300012: Plane_001
+    2300014: Plane_004_Plane_006
+    2300016: Plane_005_Plane_007
+    2300018: Plane_006_Plane_008
+    3300000: Body_001_Plane_003
+    3300002: Door2_Mesh_001
+    3300004: Door3_Mesh_002
+    3300006: Door4_Mesh_004
+    3300008: Door5_Mesh_003
+    3300010: Plane
+    3300012: Plane_001
+    3300014: Plane_004_Plane_006
+    3300016: Plane_005_Plane_007
+    3300018: Plane_006_Plane_008
+    4300000: Body_001_Plane_003
+    4300002: Door2_Mesh_001
+    4300004: Door3_Mesh_002
+    4300006: Door4_Mesh_004
+    4300008: Door5_Mesh_003
+    4300010: Plane
+    4300012: Plane_001
+    4300014: Plane_004_Plane_006
+    4300016: Plane_005_Plane_007
+    4300018: Plane_006_Plane_008
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -73,7 +117,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -98,7 +142,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
