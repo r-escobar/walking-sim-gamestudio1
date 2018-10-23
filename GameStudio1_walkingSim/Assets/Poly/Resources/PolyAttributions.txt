@@ -1,19 +1,19 @@
 This project uses the following items from Poly (http://poly.google.com):
 
+Title: Chapel
+Author: Poly by Google
+URL: https://poly.google.com/view/6Fk2w-sKlk6
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Chapel and environment
 Author: Poly by Google
 URL: https://poly.google.com/view/aLVE3oD4aDr
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
-Title: Gameboy
-Author: Jason Toff
-URL: https://poly.google.com/view/dczUnD4aslM
-License: Creative Commons CC-BY
-https://creativecommons.org/licenses/by/3.0/legalcode
-
-Title: Paper airplane
-Author: Poly by Google
-URL: https://poly.google.com/view/5Dzvrp9lvtN
+Title: NYC Block 1
+Author: Alan Zimmerman
+URL: https://poly.google.com/view/2U0EYlolPLo
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
