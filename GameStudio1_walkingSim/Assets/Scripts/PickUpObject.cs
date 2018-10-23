@@ -46,7 +46,8 @@ public class PickUpObject : MonoBehaviour
 							mouseLookY.SetSensitivity(0f);
 							fpController.FreezeMovement();
 							blurFader.BlurFadeIn();
-							//cursorImage.enabled = false;
+							if(cursorImage)
+								cursorImage.enabled = false;
 						}
 						else if(objScript.inspectTimer >= minInspectDuration)
 						{
@@ -56,7 +57,8 @@ public class PickUpObject : MonoBehaviour
 							mouseLookY.ResetSensitivity();
 							fpController.UnfreezeMovement();
 							blurFader.BlurFadeOut();
-							//cursorImage.enabled = true;
+							if(cursorImage)
+								cursorImage.enabled = true;
 						}
 					}
 					else

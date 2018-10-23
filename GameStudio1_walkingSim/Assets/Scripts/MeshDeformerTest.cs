@@ -11,6 +11,7 @@ public class MeshDeformerTest : MonoBehaviour {
 
 	public float triangleGapProb = 0.1f;
 	private float timeToNextGapCalc = -1;
+	public float quickDeformChance = 0.5f;
 
 	private int[] baseTriList;
 	private List<int> modifiedTriList;
@@ -24,33 +25,41 @@ public class MeshDeformerTest : MonoBehaviour {
 	{
 		if (Time.timeSinceLevelLoad > timeToNextGapCalc)
 		{
-			//timeToNextGapCalc += Random.Range(0.001f, 0.075f);
-			timeToNextGapCalc += 1f;
+			if (Random.value <= quickDeformChance)
+			{
+				timeToNextGapCalc += Random.Range(0.001f, 0.075f);
+			}
+			else
+			{
+				timeToNextGapCalc += Random.Range(0.75f, 1.25f);
+			}
+
+			//timeToNextGapCalc += 1f;
 			
 			Mesh mesh = GetComponent<MeshFilter> ().mesh;
 
-//			modifiedTriList = new List<int>();
-//			for (int i = 0; i < baseTriList.Length; i += 3)
-//			{
-//				if (Random.Range(0f, 1f) > triangleGapProb)
-//				{
-//					modifiedTriList.Add(baseTriList[i]);
-//					modifiedTriList.Add(baseTriList[i + 1]);
-//					modifiedTriList.Add(baseTriList[i + 2]);
-//				}
-//			}
-
-
-			modifiedTriList = new List<int>(baseTriList);
-			for (int i = 0; i < modifiedTriList.Count; i++) {
+			modifiedTriList = new List<int>();
+			for (int i = 0; i < baseTriList.Length; i += 3)
+			{
 				if (Random.Range(0f, 1f) > triangleGapProb)
 				{
-					int temp = modifiedTriList[i];
-					int randomIndex = Random.Range(i, modifiedTriList.Count);
-					modifiedTriList[i] = modifiedTriList[randomIndex];
-					modifiedTriList[randomIndex] = temp;
+					modifiedTriList.Add(baseTriList[i]);
+					modifiedTriList.Add(baseTriList[i + 1]);
+					modifiedTriList.Add(baseTriList[i + 2]);
 				}
 			}
+
+
+//			modifiedTriList = new List<int>(baseTriList);
+//			for (int i = 0; i < modifiedTriList.Count; i++) {
+//				if (Random.Range(0f, 1f) > triangleGapProb)
+//				{
+//					int temp = modifiedTriList[i];
+//					int randomIndex = Random.Range(i, modifiedTriList.Count);
+//					modifiedTriList[i] = modifiedTriList[randomIndex];
+//					modifiedTriList[randomIndex] = temp;
+//				}
+//			}
 			
 //		Vector3[] vertices = mesh.vertices;
 // 

@@ -29,15 +29,23 @@ public class FootstepController : MonoBehaviour
 		//Debug.Log("footstep played!");
 		
 		// move the particle system to the player's feet (0.001f so it's not in the ground)
-		partSys.transform.position = new Vector3(transform.position.x, 0.001f, transform.position.z);
 		
-		partSys.Play();
+		RaycastHit hit;
+		if (Physics.Raycast(transform.position, Vector3.down, out hit, 5f))
+		{
+			if (hit.collider.tag == "Ground")
+			{
+				partSys.transform.position = new Vector3(transform.position.x, 0.001f, transform.position.z);
 		
-		audSrc.pitch = startingPitch + Random.Range(-pitchVariation, pitchVariation);
-		audSrc.Play();
+				partSys.Play();
+		
+				audSrc.pitch = startingPitch + Random.Range(-pitchVariation, pitchVariation);
+				audSrc.Play();
 
-		// after footstepIgnoreTime seconds, reset the footstepPlayed variable
-		Invoke("ResetFootstepPlayed", footstepIgnoreTime);
+				// after footstepIgnoreTime seconds, reset the footstepPlayed variable
+				Invoke("ResetFootstepPlayed", footstepIgnoreTime);
+			}
+		}
 	}
 
 	void ResetFootstepPlayed()
