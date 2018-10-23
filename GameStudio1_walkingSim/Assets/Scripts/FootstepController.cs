@@ -10,6 +10,14 @@ public class FootstepController : MonoBehaviour
 
 	private bool footstepPlayed = false;
 	public float footstepIgnoreTime = 0.5f;
+
+	private float startingPitch;
+	public float pitchVariation = 0.05f;
+
+	void Start()
+	{
+		startingPitch = audSrc.pitch;
+	}
 	
 	public void StartStep()
 	{
@@ -24,6 +32,8 @@ public class FootstepController : MonoBehaviour
 		partSys.transform.position = new Vector3(transform.position.x, 0.001f, transform.position.z);
 		
 		partSys.Play();
+		
+		audSrc.pitch = startingPitch + Random.Range(-pitchVariation, pitchVariation);
 		audSrc.Play();
 
 		// after footstepIgnoreTime seconds, reset the footstepPlayed variable
