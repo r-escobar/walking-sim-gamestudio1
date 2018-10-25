@@ -9,29 +9,79 @@ public class MeshDeformerTest : MonoBehaviour {
  	
 	Vector3[] vertPositions;
 
+	[Range(0f,1f)]
 	public float triangleGapProb = 0.1f;
-	private float timeToNextGapCalc = -1;
+	[Range(0f,1f)]
+	public float triangleDeformProb = 0.1f;
+	[Range(0f,1f)]
 	public float quickDeformChance = 0.5f;
 
+	public bool triangleGapDeformation = true;
+	public bool triangleReassignment = false;
+
+	public float deformModifier = 1f;
+
+	public float quickDeformDelayMin = 0.001f;
+	public float quickDeformDelayMax = 0.05f;
+	public float longDeformDelayMin = 0.75f;
+	public float longDeformDelayMax = 1.5f;
+	
+	private float timeToNextGapCalc = -1;
 	private int[] baseTriList;
 	private List<int> modifiedTriList;
+
+	public float stopGazingDelay = 0.5f;
+	private float stopGazingTime;
+	private bool isBeingGazedAt = false;
+
+	public float deformSmoothing = 10f;
+	public float undeformSmoothing = 100f;
+	public float deformSpeed = 5f;		
+	
 	void Start()
 	{
 		vertPositions = GetComponent<MeshFilter> ().mesh.vertices;
 		baseTriList = GetComponent<MeshFilter>().mesh.triangles;
 	}
 	
+	public void GazeAtObject()
+	{
+		stopGazingTime = Time.timeSinceLevelLoad + stopGazingDelay;
+		isBeingGazedAt = true;
+
+		//Debug.Log("gazing at " + gameObject.name);
+	}
+	
 	void Update()
 	{
+		if (Time.timeSinceLevelLoad > stopGazingTime)
+			isBeingGazedAt = false;
+
+		if (isBeingGazedAt)
+		{
+			deformModifier -= deformModifier * Time.deltaTime * undeformSmoothing;
+			//deformModifier -= Time.deltaTime * deformSpeed;
+
+			if (deformModifier < 0f)
+				deformModifier = 0f;
+		}
+		else
+		{
+			//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
+			deformModifier += Time.deltaTime * deformSpeed;
+			if (deformModifier > 1f)
+				deformModifier = 1f;
+		}
+		
 		if (Time.timeSinceLevelLoad > timeToNextGapCalc)
 		{
-			if (Random.value <= quickDeformChance)
+			if (Random.value <= (quickDeformChance))
 			{
-				timeToNextGapCalc += Random.Range(0.001f, 0.075f);
+				timeToNextGapCalc += Random.Range(quickDeformDelayMin, quickDeformDelayMax);
 			}
 			else
 			{
-				timeToNextGapCalc += Random.Range(0.75f, 1.5f);
+				timeToNextGapCalc += Random.Range(longDeformDelayMin, longDeformDelayMax);
 			}
 
 			//timeToNextGapCalc += 1f;
@@ -39,42 +89,37 @@ public class MeshDeformerTest : MonoBehaviour {
 			Mesh mesh = GetComponent<MeshFilter> ().mesh;
 
 			modifiedTriList = new List<int>();
-			for (int i = 0; i < baseTriList.Length; i += 3)
+
+			if (triangleGapDeformation)
 			{
-				if (Random.Range(0f, 1f) > triangleGapProb)
+				for (int i = 0; i < baseTriList.Length; i += 3)
 				{
-					modifiedTriList.Add(baseTriList[i]);
-					modifiedTriList.Add(baseTriList[i + 1]);
-					modifiedTriList.Add(baseTriList[i + 2]);
+					if (Random.value > (triangleGapProb * deformModifier))
+					{
+						modifiedTriList.Add(baseTriList[i]);
+						modifiedTriList.Add(baseTriList[i + 1]);
+						modifiedTriList.Add(baseTriList[i + 2]);
+					}
 				}
 			}
 
 
-//			modifiedTriList = new List<int>(baseTriList);
-//			for (int i = 0; i < modifiedTriList.Count; i++) {
-//				if (Random.Range(0f, 1f) > triangleGapProb)
-//				{
-//					int temp = modifiedTriList[i];
-//					int randomIndex = Random.Range(i, modifiedTriList.Count);
-//					modifiedTriList[i] = modifiedTriList[randomIndex];
-//					modifiedTriList[randomIndex] = temp;
-//				}
-//			}
+			if (triangleReassignment)
+			{
+				if(!triangleGapDeformation)
+					modifiedTriList = new List<int>(baseTriList);
+				
+				for (int i = 0; i < modifiedTriList.Count; i++) {
+					if (Random.value <= (triangleDeformProb * deformModifier))
+					{
+						int temp = modifiedTriList[i];
+						int randomIndex = Random.Range(i, modifiedTriList.Count);
+						modifiedTriList[i] = modifiedTriList[randomIndex];
+						modifiedTriList[randomIndex] = temp;
+					}
+				}
+			}
 			
-//		Vector3[] vertices = mesh.vertices;
-// 
-//		float invertscaleX =1-(scaleX-1);
-//		float invertscaleY =1-(scaleY-1);
-// 
-// 
-//		
-//		for (int i=0; i<vertices.Length; i++)
-//		{
-//			vertices[i].x = vertPositions[i].x - Mathf.PerlinNoise(Time.deltaTime + vertPositions[i].x * scaleX, Time.deltaTime + vertPositions[i].y * scaleY);
-//			vertices[i].y = vertPositions[i].y + Mathf.PerlinNoise(Time.deltaTime + vertPositions[i].x * scaleX, Time.deltaTime + vertPositions[i].y * scaleY);
-//			vertices[i].z = vertPositions[i].z + Mathf.PerlinNoise(Time.deltaTime + vertPositions[i].x * scaleX, Time.deltaTime + vertPositions[i].y * scaleY);
-//
-//		}
 		
 			mesh.triangles = modifiedTriList.ToArray();
 			mesh.RecalculateBounds ();
