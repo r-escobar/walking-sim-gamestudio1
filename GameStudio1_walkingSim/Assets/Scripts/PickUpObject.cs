@@ -18,11 +18,6 @@ public class PickUpObject : MonoBehaviour
 	public Vector3 inspectPos = new Vector3(0f, 0f, 2f);
 	public float minInspectDuration = 0.25f;
 	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
 				
@@ -73,22 +68,6 @@ public class PickUpObject : MonoBehaviour
 					}
 				}
 			}
-
 		}
-		
-//		if (Input.GetMouseButtonDown(1))
-//		{
-//			Vector3 rayOrigin = fpCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0f));
-//			RaycastHit hit;
-//			if (Physics.Raycast(rayOrigin, fpCamera.transform.forward, out hit, pickupRange))
-//			{	
-//				if (hit.collider.tag == "CanPickup")
-//				{
-//					Debug.Log("player is trying to put down a " + hit.collider.name);
-//					hit.collider.gameObject.layer = 0;
-//				}
-//			}
-//
-//		}
 	}
 }
