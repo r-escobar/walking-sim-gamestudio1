@@ -25,7 +25,6 @@ public class FootstepController : MonoBehaviour
 		if (footstepPlayed)
 			return;
 
-		footstepPlayed = true;
 		//Debug.Log("footstep played!");
 		
 		// move the particle system to the player's feet (0.001f so it's not in the ground)
@@ -35,6 +34,8 @@ public class FootstepController : MonoBehaviour
 		{
 			if (hit.collider.tag == "Ground")
 			{
+				footstepPlayed = true;
+				
 				partSys.transform.position = new Vector3(transform.position.x, 0.001f, transform.position.z);
 		
 				partSys.Play();
