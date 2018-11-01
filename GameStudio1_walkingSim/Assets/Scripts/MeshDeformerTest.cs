@@ -64,13 +64,13 @@ public class MeshDeformerTest : MonoBehaviour {
 			if (deformModifier < 0f)
 				deformModifier = 0f;
 		}
-//		else
-//		{
-//			deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
-//			deformModifier += Time.deltaTime * deformSpeed;
-//			if (deformModifier > 1f)
-//				deformModifier = 1f;
-//		}
+		else
+		{
+			//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
+			deformModifier += Time.deltaTime * deformSpeed;
+			if (deformModifier > 1f)
+				deformModifier = 1f;
+		}
 		
 		if (Time.timeSinceLevelLoad > timeToNextGapCalc)
 		{
