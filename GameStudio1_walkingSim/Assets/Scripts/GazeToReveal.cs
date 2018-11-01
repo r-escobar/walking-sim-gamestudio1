@@ -6,16 +6,8 @@ public class GazeToReveal : MonoBehaviour {
 
 	public Camera fpCamera;
 	public float gazeRange = 5f;
-	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	public CursorDotController cursorScript;
 
 	void FixedUpdate()
 	{
@@ -24,6 +16,9 @@ public class GazeToReveal : MonoBehaviour {
 		{
 			if (hit.collider.tag == "CanPickup")
 			{
+				if(cursorScript)
+					cursorScript.EnlargeCursor();
+				
 				MeshDeformerTest glitchScript = hit.collider.gameObject.GetComponent<MeshDeformerTest>();
 
 				if (glitchScript)
@@ -31,6 +26,11 @@ public class GazeToReveal : MonoBehaviour {
 					glitchScript.GazeAtObject();
 				}
 			}
+			
+		} else
+		{
+			if(cursorScript)
+				cursorScript.ResetCursorSize();
 		}
 	}
 }
