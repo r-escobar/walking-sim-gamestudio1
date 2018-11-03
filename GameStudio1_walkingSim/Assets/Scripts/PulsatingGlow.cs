@@ -6,8 +6,8 @@ public class PulsatingGlow : MonoBehaviour
 {
 
 	public float glowAmount = 0.2f;
-	private float brightnessMin;
-	private float brightnessMax;
+	//private float brightnessMin;
+	//private float brightnessMax;
 
 	private float amp;
 	public float glowSpeed = 5f;
@@ -21,8 +21,8 @@ public class PulsatingGlow : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		float yPosHigh = mRend.material.GetFloat("_yPosHigh");
-		brightnessMin = yPosHigh * (1f - glowAmount);
-		brightnessMax = yPosHigh * (1f + glowAmount);
+		//brightnessMin = yPosHigh * (1f - glowAmount);
+		//brightnessMax = yPosHigh * (1f + glowAmount);
 
 		startingBrightness = yPosHigh;
 		amp = glowAmount * yPosHigh;

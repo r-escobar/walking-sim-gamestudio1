@@ -7,7 +7,7 @@ public class MeshDeformerTest : MonoBehaviour {
 	public float scaleX = 1f;
 	public float scaleY = 1f;
  	
-	Vector3[] vertPositions;
+	//Vector3[] vertPositions;
 
 	[Range(0f,1f)]
 	public float triangleGapProb = 0.1f;
@@ -44,7 +44,7 @@ public class MeshDeformerTest : MonoBehaviour {
 
 	private MeshRenderer mRend;
 	private float startingColorVal;
-	private float curColorVal;
+	//private float curColorVal;
 	public float colorSmoothing = 0.5f;
 
 
@@ -54,11 +54,11 @@ public class MeshDeformerTest : MonoBehaviour {
 	
 	void Start()
 	{
-		vertPositions = GetComponent<MeshFilter> ().mesh.vertices;
+		//vertPositions = GetComponent<MeshFilter> ().mesh.vertices;
 		baseTriList = GetComponent<MeshFilter>().mesh.triangles;
 		mRend = GetComponent<MeshRenderer>();
 		startingColorVal = mRend.material.GetFloat("_yPosHigh");
-		curColorVal = startingColorVal;
+		//curColorVal = startingColorVal;
 
 		if (!glitchAudio)
 			glitchAudio = GetComponent<AudioSource>();
