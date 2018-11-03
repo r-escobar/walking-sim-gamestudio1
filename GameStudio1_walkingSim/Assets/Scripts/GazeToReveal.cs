@@ -14,9 +14,10 @@ public class GazeToReveal : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast(transform.position, fpCamera.transform.forward, out hit, gazeRange))
 		{
-			if (hit.collider.tag == "CanPickup")
+			if (hit.collider.tag == "CanPickup" || hit.collider.tag == "RevealedByGaze")
 			{
-				if(cursorScript)
+				
+				if(cursorScript && hit.collider.tag == "CanPickup")
 					cursorScript.EnlargeCursor();
 				
 				MeshDeformerTest glitchScript = hit.collider.gameObject.GetComponent<MeshDeformerTest>();

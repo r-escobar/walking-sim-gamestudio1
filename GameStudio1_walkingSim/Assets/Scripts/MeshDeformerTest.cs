@@ -36,19 +36,29 @@ public class MeshDeformerTest : MonoBehaviour {
 
 	public float deformSmoothing = 10f;
 	public float undeformSmoothing = 100f;
-	public float deformSpeed = 5f;		
+	public float deformSpeed = 5f;
+
+	public bool stayUndeformed = true;
+	public bool changeColorOnGaze = true;
+	public float colorMod = 0.5f;
+
+	private MeshRenderer mRend;
+	private float startingColorVal;
+	private float curColorVal;
 	
 	void Start()
 	{
 		vertPositions = GetComponent<MeshFilter> ().mesh.vertices;
 		baseTriList = GetComponent<MeshFilter>().mesh.triangles;
+		mRend = GetComponent<MeshRenderer>();
+		startingColorVal = mRend.material.GetFloat("_yPosHigh");
 	}
 	
 	public void GazeAtObject()
 	{
 		stopGazingTime = Time.timeSinceLevelLoad + stopGazingDelay;
 		isBeingGazedAt = true;
-
+	
 		//Debug.Log("gazing at " + gameObject.name);
 	}
 	
@@ -61,15 +71,27 @@ public class MeshDeformerTest : MonoBehaviour {
 		{
 			deformModifier -= deformModifier * Time.deltaTime * undeformSmoothing;
 
-			if (deformModifier < 0f)
+			if (deformModifier <= 0.001f)
+			{
 				deformModifier = 0f;
+				mRend.material.SetFloat("_yPosHigh", startingColorVal);
+			}
+			else
+			{
+				
+				mRend.material.SetFloat("_yPosHigh", startingColorVal * colorMod);
+			}
 		}
 		else
 		{
-			//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
-			deformModifier += Time.deltaTime * deformSpeed;
-			if (deformModifier > 1f)
-				deformModifier = 1f;
+			mRend.material.SetFloat("_yPosHigh", startingColorVal);
+			if (!stayUndeformed)
+			{
+				//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
+				deformModifier += Time.deltaTime * deformSpeed;
+				if (deformModifier > 1f)
+					deformModifier = 1f;
+			}
 		}
 		
 		if (Time.timeSinceLevelLoad > timeToNextGapCalc)

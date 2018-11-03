@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CanPickup
   - Ground
+  - RevealedByGaze
   layers:
   - Default
   - TransparentFX
