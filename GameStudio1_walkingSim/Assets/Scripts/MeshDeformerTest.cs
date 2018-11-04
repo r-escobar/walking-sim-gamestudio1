@@ -7,7 +7,7 @@ public class MeshDeformerTest : MonoBehaviour {
 	public float scaleX = 1f;
 	public float scaleY = 1f;
  	
-	Vector3[] vertPositions;
+	//Vector3[] vertPositions;
 
 	[Range(0f,1f)]
 	public float triangleGapProb = 0.1f;
@@ -44,55 +44,80 @@ public class MeshDeformerTest : MonoBehaviour {
 
 	private MeshRenderer mRend;
 	private float startingColorVal;
-	private float curColorVal;
+	//private float curColorVal;
+	public float colorSmoothing = 0.5f;
+
+
+	public AudioSource glitchAudio;
+	public  float volumeControl = 1f;
+	public float volumeAdjustSpeed = 0.002f;
 	
 	void Start()
 	{
-		vertPositions = GetComponent<MeshFilter> ().mesh.vertices;
+		//vertPositions = GetComponent<MeshFilter> ().mesh.vertices;
 		baseTriList = GetComponent<MeshFilter>().mesh.triangles;
 		mRend = GetComponent<MeshRenderer>();
 		startingColorVal = mRend.material.GetFloat("_yPosHigh");
+		//curColorVal = startingColorVal;
+
+		if (!glitchAudio)
+			glitchAudio = GetComponent<AudioSource>();
 	}
 	
 	public void GazeAtObject()
 	{
 		stopGazingTime = Time.timeSinceLevelLoad + stopGazingDelay;
 		isBeingGazedAt = true;
-	
-		//Debug.Log("gazing at " + gameObject.name);
 	}
 	
 	void Update()
 	{
+
+		volumeControl = Mathf.Clamp(volumeControl, 0f, 1f);
+		if (glitchAudio)
+			glitchAudio.volume = Random.value * volumeControl;
+		
 		if (Time.timeSinceLevelLoad > stopGazingTime)
 			isBeingGazedAt = false;
 
 		if (isBeingGazedAt)
 		{
 			deformModifier -= deformModifier * Time.deltaTime * undeformSmoothing;
+			
+			if(volumeControl > 0f)
+			volumeControl -= Time.deltaTime * volumeAdjustSpeed;
 
 			if (deformModifier <= 0.001f)
 			{
 				deformModifier = 0f;
-				mRend.material.SetFloat("_yPosHigh", startingColorVal);
+				//curColorVal += (startingColorVal - curColorVal) * Time.deltaTime * colorSmoothing;
 			}
 			else
 			{
-				
-				mRend.material.SetFloat("_yPosHigh", startingColorVal * colorMod);
+				//curColorVal += ((startingColorVal * colorMod) - curColorVal) * Time.deltaTime * colorSmoothing;
 			}
 		}
 		else
 		{
-			mRend.material.SetFloat("_yPosHigh", startingColorVal);
+			//curColorVal += (startingColorVal - curColorVal) * Time.deltaTime * colorSmoothing;
 			if (!stayUndeformed)
 			{
 				//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
+				if(volumeControl < 1f)
+					volumeControl += Time.deltaTime * volumeAdjustSpeed;
+				
 				deformModifier += Time.deltaTime * deformSpeed;
 				if (deformModifier > 1f)
 					deformModifier = 1f;
 			}
 		}
+
+//		if (curColorVal < startingColorVal * colorMod)
+//			curColorVal = startingColorVal * colorMod;
+//		else if (curColorVal > startingColorVal)
+//			curColorVal = startingColorVal;
+			              
+		//mRend.material.SetFloat("_yPosHigh", curColorVal);
 		
 		if (Time.timeSinceLevelLoad > timeToNextGapCalc)
 		{
