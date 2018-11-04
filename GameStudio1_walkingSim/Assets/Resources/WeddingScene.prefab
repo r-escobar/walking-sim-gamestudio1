@@ -734,13 +734,14 @@ GameObject:
   - component: {fileID: 33621372327679660}
   - component: {fileID: 114322088928899246}
   - component: {fileID: 64239953037007318}
+  - component: {fileID: 114503764369187540}
   m_Layer: 0
   m_Name: Chapel Interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1549579155943930
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,7 +3978,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538278939459084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -41349,6 +41350,8 @@ MonoBehaviour:
   volumeDisturbanceAmount: 0.1
   pairedMeshScript: {fileID: 0}
   undeformActionTarget: {fileID: 0}
+  numDependentObjects: 0
+  giantUnderformTarget: {fileID: 114503764369187540}
 --- !u!114 &114322088928899246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75472,6 +75475,47 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114503764369187540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538278939459084}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db06e3290b0ed974b997c8c58f90ec39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleX: 1
+  scaleY: 1
+  triangleGapProb: 0.9
+  triangleDeformProb: 0.1
+  quickDeformChance: 0.5
+  triangleGapDeformation: 1
+  triangleReassignment: 0
+  deformModifier: 1
+  quickDeformDelayMin: 0.001
+  quickDeformDelayMax: 0.05
+  longDeformDelayMin: 0.75
+  longDeformDelayMax: 1.5
+  stopGazingDelay: 0.5
+  deformSmoothing: 10
+  undeformSmoothing: 100
+  deformSpeed: 5
+  stayUndeformed: 1
+  changeColorOnGaze: 0
+  colorMod: 0.5
+  colorSmoothing: 0.5
+  glitchAudio: {fileID: 0}
+  randomizeVolume: 0
+  volumeControl: 1
+  volumeAdjustSpeed: 0.002
+  maxVolume: 1
+  volumeDisturbanceAmount: 0.1
+  pairedMeshScript: {fileID: 0}
+  undeformActionTarget: {fileID: 0}
+  numDependentObjects: 2
+  giantUnderformTarget: {fileID: 0}
 --- !u!114 &114670217260471312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75511,6 +75555,8 @@ MonoBehaviour:
   volumeDisturbanceAmount: 0.1
   pairedMeshScript: {fileID: 0}
   undeformActionTarget: {fileID: 1796478351936142}
+  numDependentObjects: 0
+  giantUnderformTarget: {fileID: 114503764369187540}
 --- !u!114 &114729847940024386
 MonoBehaviour:
   m_ObjectHideFlags: 1

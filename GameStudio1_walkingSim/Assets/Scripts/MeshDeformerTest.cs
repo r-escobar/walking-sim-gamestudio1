@@ -19,6 +19,7 @@ public class MeshDeformerTest : MonoBehaviour {
 	public bool triangleGapDeformation = true;
 	public bool triangleReassignment = false;
 
+	[Range(0f,1f)]
 	public float deformModifier = 1f;
 
 	public float quickDeformDelayMin = 0.001f;
