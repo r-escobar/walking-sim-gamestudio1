@@ -51,13 +51,18 @@ public class MeshDeformerTest : MonoBehaviour {
 	public AudioSource glitchAudio;
 	public  float volumeControl = 1f;
 	public float volumeAdjustSpeed = 0.002f;
+	public float maxVolume = 1f;
+	public float volumeDisturbanceAmount = 0.1f;
+
+	public MeshDeformerTest pairedMeshScript;
 	
 	void Start()
 	{
 		//vertPositions = GetComponent<MeshFilter> ().mesh.vertices;
 		baseTriList = GetComponent<MeshFilter>().mesh.triangles;
 		mRend = GetComponent<MeshRenderer>();
-		startingColorVal = mRend.material.GetFloat("_yPosHigh");
+//		if(mRend.material.HasProperty("_yPosHigh"))
+//			startingColorVal = mRend.material.GetFloat("_yPosHigh");
 		//curColorVal = startingColorVal;
 
 		if (!glitchAudio)
@@ -73,7 +78,7 @@ public class MeshDeformerTest : MonoBehaviour {
 	void Update()
 	{
 
-		volumeControl = Mathf.Clamp(volumeControl, 0f, 1f);
+		volumeControl = Mathf.Clamp(volumeControl, 0f, maxVolume);
 		if (glitchAudio)
 			glitchAudio.volume = Random.value * volumeControl;
 		
@@ -103,7 +108,7 @@ public class MeshDeformerTest : MonoBehaviour {
 			if (!stayUndeformed)
 			{
 				//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
-				if(volumeControl < 1f)
+				if(volumeControl < maxVolume)
 					volumeControl += Time.deltaTime * volumeAdjustSpeed;
 				
 				deformModifier += Time.deltaTime * deformSpeed;
@@ -112,6 +117,9 @@ public class MeshDeformerTest : MonoBehaviour {
 			}
 		}
 
+		if (pairedMeshScript)
+			pairedMeshScript.deformModifier = deformModifier;
+		
 //		if (curColorVal < startingColorVal * colorMod)
 //			curColorVal = startingColorVal * colorMod;
 //		else if (curColorVal > startingColorVal)
@@ -168,6 +176,7 @@ public class MeshDeformerTest : MonoBehaviour {
 			mesh.triangles = modifiedTriList.ToArray();
 			mesh.RecalculateBounds ();
 			mesh.RecalculateNormals ();
+
 		}
 
 	}

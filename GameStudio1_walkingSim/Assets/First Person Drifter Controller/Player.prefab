@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 114870943398764420}
   - component: {fileID: 114430820142048566}
   - component: {fileID: 114605364567604822}
-  - component: {fileID: 114131137770197216}
+  - component: {fileID: 114937420048565764}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -398,20 +398,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &114131137770197216
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14af363d661ca194b9c1651bdfe48652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpCamera: {fileID: 2000000}
-  gazeRange: 4
-  cursorScript: {fileID: 0}
 --- !u!114 &114430820142048566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -480,3 +466,17 @@ MonoBehaviour:
   pickupRange: 2
   inspectPos: {x: 0, y: 0, z: 1}
   minInspectDuration: 0.25
+--- !u!114 &114937420048565764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14af363d661ca194b9c1651bdfe48652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpCamera: {fileID: 2000000}
+  gazeRange: 5
+  cursorScript: {fileID: 0}

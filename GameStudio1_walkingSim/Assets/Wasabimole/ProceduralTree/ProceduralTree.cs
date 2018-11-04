@@ -125,6 +125,10 @@ namespace Wasabimole.ProceduralTree
             if (filter.sharedMesh != null) checksum = checksumSerialized;
             Renderer = gameObject.GetComponent<MeshRenderer>();
             if (Renderer == null) Renderer = gameObject.AddComponent<MeshRenderer>();
+
+            MeshCollider meshCol = GetComponent<MeshCollider>();
+            if (meshCol)
+                meshCol.sharedMesh = filter.sharedMesh;
         }
 
         // ---------------------------------------------------------------------------------------------------------------------------

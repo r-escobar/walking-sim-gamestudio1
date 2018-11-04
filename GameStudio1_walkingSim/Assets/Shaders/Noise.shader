@@ -24,22 +24,10 @@
             float _Factor1;
             float _Factor2;
             float _Factor3;
-            
-//            struct appdata {
-//                 float4 vertex : POSITION;
-//                 float2 texcoord : TEXCOORD0;
-//             };
-// 
-              struct v2f
-             {
-                 float2 uv : TEXCOORD0;
-                 UNITY_FOG_COORDS(1)
-                 float4 vertex : SV_POSITION;
-             };
- 
+
             float noise(half2 uv)
             {
-                return frac(sin(dot(uv, float2(_Factor1, _Factor2))) * _Factor3);
+                return frac(sin(dot(uv, float2(_Factor1, _Factor2))) * _Factor3 * _Time.y);
             }
 // 
 //            v2f vert (appdata v)
@@ -50,9 +38,9 @@
 //                return o;
 //            }
 // 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag (v2f_img i) : SV_Target
             {
-                fixed4 col = noise(i.uv);
+                fixed4 col = noise(i.uv) * 0.8f;
                 //UNITY_APPLY_FOG(i.fogCoord, col);
                 
                 return col;
