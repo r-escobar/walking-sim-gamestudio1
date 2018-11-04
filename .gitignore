@@ -8,6 +8,12 @@ Assets/AssetStoreTools*
 # Visual Studio cache directory
 .vs/
 
+#Vintage House Assets
+GameStudio1_walkingSim/Assets/1442.unit Vintage House 1.2.meta
+GameStudio1_walkingSim/Assets/1442.unit Vintage House 1.2/
+GameStudio1_walkingSim/Assets/Vintage House.meta
+GameStudio1_walkingSim/Assets/Vintage House/
+
 # Rider Directory
 .idea/
 
