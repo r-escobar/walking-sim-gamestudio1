@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class ObjectController : MonoBehaviour
@@ -22,10 +23,16 @@ public class ObjectController : MonoBehaviour
 	private Vector2 axis2;
 
 	public float inspectTimer = 0f;
+
+	public bool playAudioOnPickup = false;
+	public AudioSource audSrc;
+	private float startingVolume;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		if (audSrc)
+			startingVolume = audSrc.volume;
 		startingPos = transform.localPosition;
 		startingRot = transform.localRotation;
 		if (transform.parent)
@@ -63,6 +70,10 @@ public class ObjectController : MonoBehaviour
 		transform.parent = newParent;
 		transform.localRotation = Quaternion.identity;
 		transform.localPosition = inspectPos;
+		if (playAudioOnPickup)
+		{
+			PlayAudio();
+		}
 	}
 	
 	public void StopInspectingObject()
@@ -73,6 +84,18 @@ public class ObjectController : MonoBehaviour
 		transform.localRotation = startingRot;
 		transform.localPosition = startingPos;
 		inspectTimer = 0f;
+		if (audSrc)
+		{
+			if (audSrc.isPlaying)
+				audSrc.DOFade(0f, 0.25f);
+		}
+	}
+
+	public void PlayAudio()
+	{
+		audSrc.time = 0f;
+		audSrc.DOFade(1f, 0.5f);
+		audSrc.Play();
 	}
 	
 	public void SetLayer(GameObject go, int layerNumber)

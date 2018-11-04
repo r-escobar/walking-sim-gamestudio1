@@ -69,14 +69,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.08, z: 5.05}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 1.325, y: 1.842, z: -30.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -463,7 +463,7 @@ MonoBehaviour:
   mouseLookY: {fileID: 11400012}
   fpController: {fileID: 11400014}
   blurFader: {fileID: 114605364567604822}
-  pickupRange: 2
+  pickupRange: 5
   inspectPos: {x: 0, y: 0, z: 1}
   minInspectDuration: 0.25
 --- !u!114 &114937420048565764

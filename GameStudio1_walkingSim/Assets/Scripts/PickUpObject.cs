@@ -40,8 +40,10 @@ public class PickUpObject : MonoBehaviour
 							objScript.StartInspectingObject(inspectPos, transform);
 							mouseLookX.SetSensitivity(0f);
 							mouseLookY.SetSensitivity(0f);
-							fpController.FreezeMovement();
-							blurFader.BlurFadeIn();
+							if(fpController)
+								fpController.FreezeMovement();
+							if(blurFader)
+								blurFader.BlurFadeIn();
 							if(cursorImage)
 								cursorImage.enabled = false;
 
@@ -56,8 +58,10 @@ public class PickUpObject : MonoBehaviour
 							objScript.StopInspectingObject();
 							mouseLookX.ResetSensitivity();
 							mouseLookY.ResetSensitivity();
-							fpController.UnfreezeMovement();
-							blurFader.BlurFadeOut();
+							if(fpController)
+								fpController.UnfreezeMovement();
+							if(blurFader)
+								blurFader.BlurFadeOut();
 							if(cursorImage)
 								cursorImage.enabled = true;
 						}

@@ -49,12 +49,20 @@ public class MeshDeformerTest : MonoBehaviour {
 
 
 	public AudioSource glitchAudio;
+	public bool randomizeVolume = true;
 	public  float volumeControl = 1f;
 	public float volumeAdjustSpeed = 0.002f;
 	public float maxVolume = 1f;
 	public float volumeDisturbanceAmount = 0.1f;
 
 	public MeshDeformerTest pairedMeshScript;
+	public GameObject undeformActionTarget;
+
+	public int numDependentObjects;
+	public MeshDeformerTest giantUnderformTarget;
+	private bool hasBeenUndeformed = false;
+	private int maxObjects;
+	
 	
 	void Start()
 	{
@@ -65,6 +73,8 @@ public class MeshDeformerTest : MonoBehaviour {
 //			startingColorVal = mRend.material.GetFloat("_yPosHigh");
 		//curColorVal = startingColorVal;
 
+		maxObjects = numDependentObjects;
+		
 		if (!glitchAudio)
 			glitchAudio = GetComponent<AudioSource>();
 	}
@@ -75,47 +85,71 @@ public class MeshDeformerTest : MonoBehaviour {
 		isBeingGazedAt = true;
 	}
 	
+	
 	void Update()
 	{
 
-		volumeControl = Mathf.Clamp(volumeControl, 0f, maxVolume);
-		if (glitchAudio)
-			glitchAudio.volume = Random.value * volumeControl;
-		
-		if (Time.timeSinceLevelLoad > stopGazingTime)
-			isBeingGazedAt = false;
-
-		if (isBeingGazedAt)
+		if (maxObjects == 0)
 		{
-			deformModifier -= deformModifier * Time.deltaTime * undeformSmoothing;
-			
-			if(volumeControl > 0f)
-			volumeControl -= Time.deltaTime * volumeAdjustSpeed;
-
-			if (deformModifier <= 0.001f)
+			volumeControl = Mathf.Clamp(volumeControl, 0f, maxVolume);
+			if (glitchAudio)
 			{
-				deformModifier = 0f;
-				//curColorVal += (startingColorVal - curColorVal) * Time.deltaTime * colorSmoothing;
+				if(randomizeVolume)
+					glitchAudio.volume = Random.value * volumeControl;
+				else
+					glitchAudio.volume = volumeControl;
 			}
-			else
+		
+			if (Time.timeSinceLevelLoad > stopGazingTime)
+				isBeingGazedAt = false;
+
+			if (isBeingGazedAt)
 			{
-				//curColorVal += ((startingColorVal * colorMod) - curColorVal) * Time.deltaTime * colorSmoothing;
+				deformModifier -= deformModifier * Time.deltaTime * undeformSmoothing;
+			
+				if(volumeControl > 0f)
+					volumeControl -= Time.deltaTime * volumeAdjustSpeed;
+
+				if (deformModifier <= 0.001f)
+				{
+					deformModifier = 0f;
+					if (!hasBeenUndeformed)
+					{
+						if(undeformActionTarget)
+							undeformActionTarget.SendMessage("PerformUndeformAction");
+						if (giantUnderformTarget)
+							giantUnderformTarget.numDependentObjects--;
+						
+						hasBeenUndeformed = true;
+					}
+					//curColorVal += (startingColorVal - curColorVal) * Time.deltaTime * colorSmoothing;
+					
+				}
+				else
+				{
+					//curColorVal += ((startingColorVal * colorMod) - curColorVal) * Time.deltaTime * colorSmoothing;
+				}
+			}
+			else 
+			{
+				//curColorVal += (startingColorVal - curColorVal) * Time.deltaTime * colorSmoothing;
+				if (!stayUndeformed)
+				{
+					//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
+					if(volumeControl < maxVolume)
+						volumeControl += Time.deltaTime * volumeAdjustSpeed;
+				
+					deformModifier += Time.deltaTime * deformSpeed;
+					if (deformModifier > 1f)
+						deformModifier = 1f;
+				}
 			}
 		}
 		else
 		{
-			//curColorVal += (startingColorVal - curColorVal) * Time.deltaTime * colorSmoothing;
-			if (!stayUndeformed)
-			{
-				//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
-				if(volumeControl < maxVolume)
-					volumeControl += Time.deltaTime * volumeAdjustSpeed;
-				
-				deformModifier += Time.deltaTime * deformSpeed;
-				if (deformModifier > 1f)
-					deformModifier = 1f;
-			}
+			deformModifier = numDependentObjects * 1.0f / maxObjects;
 		}
+		
 
 		if (pairedMeshScript)
 			pairedMeshScript.deformModifier = deformModifier;
