@@ -19,6 +19,7 @@ public class CursorDotController : MonoBehaviour
 	public float growDuration = 0.5f;
 	public Ease easeType;
 
+	private bool brightened = false;
 	private bool enlarged = false;
 	
 	// Use this for initialization
@@ -30,13 +31,30 @@ public class CursorDotController : MonoBehaviour
 		cursorImage = GetComponent<Image>();
 		defaultColor = cursorImage.color;
 	}
+
+	public void BrightenCursor()
+	{
+		if (brightened)
+			return;
+		brightened = true;
+		cursorImage.DOColor(hoverColor, growDuration).SetEase(easeType);
+
+	}
+
+	public void DimCursor()
+	{
+		if (!brightened)
+			return;
+		brightened = false;
+		cursorImage.DOColor(defaultColor, growDuration).SetEase(easeType);
+	}
+	
 	public void EnlargeCursor()
 	{
 		if (enlarged)
 			return;
 		enlarged = true;
 		rTransform.DOSizeDelta(new Vector2(maxSize, maxSize), growDuration, false).SetEase(easeType);
-		cursorImage.DOColor(hoverColor, growDuration).SetEase(easeType);
 	}
 
 	public void ResetCursorSize()
@@ -45,6 +63,5 @@ public class CursorDotController : MonoBehaviour
 			return;
 		enlarged = false;
 		rTransform.DOSizeDelta(defaultSize, growDuration, false).SetEase(easeType);
-		cursorImage.DOColor(defaultColor, growDuration).SetEase(easeType);
 	}
 }

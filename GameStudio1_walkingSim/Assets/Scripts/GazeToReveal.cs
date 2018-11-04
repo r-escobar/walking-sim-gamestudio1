@@ -16,22 +16,51 @@ public class GazeToReveal : MonoBehaviour {
 		{
 			if (hit.collider.tag == "CanPickup" || hit.collider.tag == "RevealedByGaze")
 			{
+
 				
-				if(cursorScript && hit.collider.tag == "CanPickup")
-					cursorScript.EnlargeCursor();
 				
 				MeshDeformerTest glitchScript = hit.collider.gameObject.GetComponent<MeshDeformerTest>();
 
 				if (glitchScript)
 				{
 					glitchScript.GazeAtObject();
+					
+				}
+				
+				if (cursorScript)
+				{
+					if (hit.collider.tag == "CanPickup")
+					{
+						cursorScript.EnlargeCursor();
+
+					} else if (hit.collider.tag == "RevealedByGaze")
+					{
+						if (glitchScript.deformModifier > 0f)
+						{
+							cursorScript.BrightenCursor();
+						}
+						else
+						{
+							cursorScript.DimCursor();
+						}
+					}
+				}
+			} else
+			{
+				if (cursorScript)
+				{
+					cursorScript.ResetCursorSize();
+					cursorScript.DimCursor();
 				}
 			}
 			
 		} else
 		{
-			if(cursorScript)
+			if (cursorScript)
+			{
 				cursorScript.ResetCursorSize();
+				cursorScript.DimCursor();
+			}
 		}
 	}
 }

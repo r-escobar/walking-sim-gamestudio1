@@ -109,7 +109,7 @@ public class MeshDeformerTest : MonoBehaviour {
 				deformModifier -= deformModifier * Time.deltaTime * undeformSmoothing;
 			
 				if(volumeControl > 0f)
-					volumeControl -= Time.deltaTime * volumeAdjustSpeed;
+					volumeControl -= Time.deltaTime * volumeAdjustSpeed * maxVolume;
 
 				if (deformModifier <= 0.001f)
 				{
@@ -138,7 +138,7 @@ public class MeshDeformerTest : MonoBehaviour {
 				{
 					//deformModifier += (1f - deformModifier) * Time.deltaTime * deformSmoothing;
 					if(volumeControl < maxVolume)
-						volumeControl += Time.deltaTime * volumeAdjustSpeed;
+						volumeControl += Time.deltaTime * volumeAdjustSpeed * maxVolume;
 				
 					deformModifier += Time.deltaTime * deformSpeed;
 					if (deformModifier > 1f)
