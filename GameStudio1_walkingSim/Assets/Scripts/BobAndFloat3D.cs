@@ -92,14 +92,14 @@ public class BobAndFloat3D : MonoBehaviour
 
 //        moveArgs.Add("position", );
 //        moveArgs.Add("time", bobDuration);
-//        moveArgs.Add("easetype", iTween.EaseType.easeInOutQuad);
+//        moveArgs.Add("easetype", iTween.EaseType.easeInOutSine);
 //        moveArgs.Add("oncomplete", "BobDown");
 //        moveArgs.Add("islocal", true);
 //
 //        iTween.MoveTo(gameObject, moveArgs);
-
+        
         transform.DOLocalMove(new Vector3(transform.localPosition.x, newYpos, transform.localPosition.z), bobDuration)
-            .SetEase(Ease.InOutQuad).OnComplete(BobDown);
+            .SetEase(Ease.InOutSine).OnComplete(BobDown);
     }
 
     public void BobDown()
@@ -119,14 +119,14 @@ public class BobAndFloat3D : MonoBehaviour
 
 //        moveArgs.Add("position", new Vector3(transform.localPosition.x, newYpos, transform.localPosition.z));
 //        moveArgs.Add("time", bobDuration);
-//        moveArgs.Add("easetype", iTween.EaseType.easeInOutQuad);
+//        moveArgs.Add("easetype", iTween.EaseType.easeInOutSine);
 //        moveArgs.Add("oncomplete", "BobUp");
 //        moveArgs.Add("islocal", true);
 //
 //        iTween.MoveTo(gameObject, moveArgs);
         
         transform.DOLocalMove(new Vector3(transform.localPosition.x, newYpos, transform.localPosition.z), bobDuration)
-            .SetEase(Ease.InOutQuad).OnComplete(BobUp);
+            .SetEase(Ease.InOutSine).OnComplete(BobUp);
     }
 
     public void FloatLeft()
@@ -146,14 +146,14 @@ public class BobAndFloat3D : MonoBehaviour
 
 //        moveArgs.Add("position", new Vector3(newXpos, transform.localPosition.y, transform.localPosition.z));
 //        moveArgs.Add("time", floatDurationForX);
-//        moveArgs.Add("easetype", iTween.EaseType.easeInOutQuad);
+//        moveArgs.Add("easetype", iTween.EaseType.easeInOutSine);
 //        moveArgs.Add("oncomplete", "FloatRight");
 //        moveArgs.Add("islocal", true);
 //
 //        iTween.MoveTo(gameObject, moveArgs);
         
         transform.DOLocalMove(new Vector3(newXpos, transform.localPosition.y, transform.localPosition.z), floatDurationForX)
-            .SetEase(Ease.InOutQuad).OnComplete(FloatRight);
+            .SetEase(Ease.InOutSine).OnComplete(FloatRight);
     }
 
     public void FloatRight()
@@ -173,14 +173,14 @@ public class BobAndFloat3D : MonoBehaviour
 
 //        moveArgs.Add("position", new Vector3(newXpos, transform.localPosition.y, transform.localPosition.z));
 //        moveArgs.Add("time", floatDurationForX);
-//        moveArgs.Add("easetype", iTween.EaseType.easeInOutQuad);
+//        moveArgs.Add("easetype", iTween.EaseType.easeInOutSine);
 //        moveArgs.Add("oncomplete", "FloatLeft");
 //        moveArgs.Add("islocal", true);
 //
 //        iTween.MoveTo(gameObject, moveArgs);
         
         transform.DOLocalMove(new Vector3(newXpos, transform.localPosition.y, transform.localPosition.z), floatDurationForX)
-            .SetEase(Ease.InOutQuad).OnComplete(FloatLeft);
+            .SetEase(Ease.InOutSine).OnComplete(FloatLeft);
     }
 
 //    public void FloatForward()
@@ -200,14 +200,14 @@ public class BobAndFloat3D : MonoBehaviour
 //
 //        moveArgs.Add("position", new Vector3(newXpos, transform.localPosition.y, transform.localPosition.z));
 //        moveArgs.Add("time", floatDurationForZ);
-//        moveArgs.Add("easetype", iTween.EaseType.easeInOutQuad);
+//        moveArgs.Add("easetype", iTween.EaseType.easeInOutSine);
 //        moveArgs.Add("oncomplete", "FloatRight");
 //        moveArgs.Add("islocal", true);
 //
 //        iTween.MoveTo(gameObject, moveArgs);
 //        
 //        transform.DOLocalMove(new Vector3(newXpos, transform.localPosition.y, transform.localPosition.z), floatDurationForZ)
-//            .SetEase(Ease.InOutQuad).OnComplete(FloatBackwards);
+//            .SetEase(Ease.InOutSine).OnComplete(FloatBackwards);
 //    }
 //
 //    public void FloatBackwards()
@@ -227,7 +227,7 @@ public class BobAndFloat3D : MonoBehaviour
 //
 //        moveArgs.Add("position", new Vector3(newXpos, transform.localPosition.y, transform.localPosition.z));
 //        moveArgs.Add("time", floatDurationForZ);
-//        moveArgs.Add("easetype", iTween.EaseType.easeInOutQuad);
+//        moveArgs.Add("easetype", iTween.EaseType.easeInOutSine);
 //        moveArgs.Add("oncomplete", "FloatLeft");
 //        moveArgs.Add("islocal", true);
 //
