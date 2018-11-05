@@ -73,11 +73,11 @@ namespace Wasabimole.ProceduralTree
         public int MaxNumVertices = 65000; // Maximum number of vertices for the tree mesh
         [Range(3, 32)]
         public int NumberOfSides = 16; // Number of sides for tree
-        [Range(0.25f, 4f)]
+        [Range(0.05f, 1f)]
         public float BaseRadius = 2f; // Base radius in meters
         [Range(0.75f, 0.95f)]
         public float RadiusStep = 0.9f; // Controls how quickly radius decreases
-        [Range(0.01f, 0.2f)]
+        [Range(0.01f, 0.8f)]
         public float MinimumRadius = 0.02f; // Minimum radius for the tree's smallest branches
         [Range(0f, 1f)]
         public float BranchRoundness = 0.8f; // Controls how round branches are
@@ -87,9 +87,49 @@ namespace Wasabimole.ProceduralTree
         public float Twisting = 20f; // How much branches twist
         [Range(0f, 0.25f)]
         public float BranchProbability = 0.1f; // Branch probability
+        [Range(0, 50)]
+        public int TrunkSegmentLength = 2; // Number of segments to go without branching
+
+        public Vector3 leafScaleMin;
+        public Vector3 leafScaleMax;
+        public bool uniformLeafScale = true;
+        public bool uniformXZLeafScale = false;
+        public bool leafScaleReduction = true;
+        public bool scaleAllInstances = false;
+        public float leafScaleReductionFactor = 0.8f;
+
+        public Color baseLeafColor;
+        public bool randColorPerLeaf = false;
+        public GameObject leafClumpPrefab;
+        public GameObject[] possibleLeafClumps;
+        List<GameObject> leafList;
+        public bool createLeaves = true;
+        public bool leavesPointingOut = false;
+        public bool editMode = false;
+
+        public float forestSpacing;
+        public float spacingNoise;
+
+
+        public float leafColorNoise = 0.0175f;
+        public float radiusStepNoise;
+        public float segmentLengthNoise;
+        public float twistingNoise;
+        //public float branchProbNoise;
+
+        public bool randomizeStep = false;
+        public bool randomizeSegLength = false;
+        public bool randomizeTwisting = false;
+
+        public bool twistyLeaves = false;
+        public int numAxesToTwist;
+
+        //public bool skinnyLeaves = false;
 
         // ---------------------------------------------------------------------------------------------------------------------------
-        
+
+        Transform _transform;
+
         float checksum; // Serialized & Non-Serialized checksums for tree rebuilds only on undo operations, or when parameters change (mesh kept on scene otherwise)
         [SerializeField, HideInInspector]
         float checksumSerialized;
@@ -125,49 +165,74 @@ namespace Wasabimole.ProceduralTree
             if (filter.sharedMesh != null) checksum = checksumSerialized;
             Renderer = gameObject.GetComponent<MeshRenderer>();
             if (Renderer == null) Renderer = gameObject.AddComponent<MeshRenderer>();
-
-            MeshCollider meshCol = GetComponent<MeshCollider>();
-            if (meshCol)
-                meshCol.sharedMesh = filter.sharedMesh;
         }
 
         // ---------------------------------------------------------------------------------------------------------------------------
         // Generate tree (only called when parameters change, or there's an undo operation)
         // ---------------------------------------------------------------------------------------------------------------------------
 
-    public void GenerateTree()
-    {
-        gameObject.isStatic = false;
-
-        var originalRotation = transform.localRotation;
-        var originalSeed = Random.seed;
-
-        if (vertexList == null) // Create lists for holding generated vertices
+        public void GenerateTree()
         {
-            vertexList = new List<Vector3>();
-            uvList = new List<Vector2>();
-            triangleList = new List<int>();
-        }
-        else // Clear lists for holding generated vertices
-        {
-            vertexList.Clear();
-            uvList.Clear();
-            triangleList.Clear();
-        }
+            _transform = transform;
 
-        SetTreeRingShape(); // Init shape array for current number of sides
+            if(leafList != null && leafList.Count > 0)
+            {
+                foreach (GameObject leaf in leafList)
+                {
+                    DestroyImmediate(leaf);
+                }
+            }
 
-        Random.seed = Seed;
-
-        // Main recursive call, starts creating the ring of vertices in the trunk's base
-        Branch(new Quaternion(), Vector3.zero, -1, BaseRadius, 0f);
             
-        Random.seed = originalSeed;
+            if(!editMode)
+            {
+                RadiusStep += (randomizeStep ? 1 : 0) * (RadiusStep == 0 ? Random.Range(0, radiusStepNoise * 2) : Random.Range(-radiusStepNoise, radiusStepNoise));
+                SegmentLength += (randomizeSegLength ? 1 : 0) * (SegmentLength == 0 ? Random.Range(0, segmentLengthNoise * 2) : Random.Range(-segmentLengthNoise, segmentLengthNoise));
+                Twisting += (randomizeTwisting ? 1 : 0) * (Twisting == 0 ? Random.Range(0, twistingNoise * 2) : Random.Range(-twistingNoise, twistingNoise));
+            }
+            
+            //BranchProbability += BranchProbability == 0 ? Random.Range(0, branchProbNoise * 2) : Random.Range(-branchProbNoise, branchProbNoise);
 
-        transform.localRotation = originalRotation; // Restore original object rotation
 
-        SetTreeMesh(); // Create/Update MeshFilter's mesh
-    }
+
+            leafList = new List<GameObject>();
+
+            gameObject.isStatic = false;
+
+            var originalRotation = _transform.localRotation;
+            var originalSeed = Random.seed;
+
+            if (vertexList == null) // Create lists for holding generated vertices
+            {
+                vertexList = new List<Vector3>(MaxNumVertices);
+                uvList = new List<Vector2>();
+                triangleList = new List<int>(MaxNumVertices * 3);
+            }
+            else // Clear lists for holding generated vertices
+            {
+                vertexList.Clear();
+                uvList.Clear();
+                triangleList.Clear();
+            }
+
+            SetTreeRingShape(); // Init shape array for current number of sides
+
+            Random.InitState(Seed);
+
+            // Main recursive call, starts creating the ring of vertices in the trunk's base
+            Branch(new Quaternion(), Vector3.zero, -1, BaseRadius, 0f, 0);
+
+            Random.InitState(originalSeed);
+
+            _transform.localRotation = originalRotation; // Restore original object rotation
+
+            SetTreeMesh(); // Create/Update MeshFilter's mesh
+
+            if(GetComponent<MeshCollider>())
+            {
+                GetComponent<MeshCollider>().sharedMesh = filter.sharedMesh;
+            }
+        }
 
         // ---------------------------------------------------------------------------------------------------------------------------
         // Set the tree mesh from the generated vertex lists (vertexList, uvList, triangleLists)
@@ -201,7 +266,7 @@ namespace Wasabimole.ProceduralTree
         // Main branch recursive function to generate tree
         // ---------------------------------------------------------------------------------------------------------------------------
 
-        void Branch(Quaternion quaternion, Vector3 position, int lastRingVertexIndex, float radius, float texCoordV)
+        void Branch(Quaternion quaternion, Vector3 position, int lastRingVertexIndex, float radius, float texCoordV, int segmentID)
         {
             var offset = Vector3.zero;
             var texCoord = new Vector2(0f, texCoordV);
@@ -215,7 +280,8 @@ namespace Wasabimole.ProceduralTree
                 var r = ringShape[n] * radius;
                 offset.x = r * Mathf.Cos(ang); // Get X, Z vertex offsets
                 offset.z = r * Mathf.Sin(ang);
-                vertexList.Add(position + quaternion * offset); // Add Vertex position
+                Vector3 offsetPos = quaternion * offset;
+                vertexList.Add(new Vector3(position.x + offsetPos.x, position.y + offsetPos.y, position.z + offsetPos.z)); // Add Vertex position
                 uvList.Add(texCoord); // Add UV coord
                 texCoord.x += textureStepU;
             }
@@ -247,30 +313,149 @@ namespace Wasabimole.ProceduralTree
                     triangleList.Add(vertexList.Count - 1);
                     triangleList.Add(n + 1);
                 }
+
+                if(createLeaves)
+                {
+                    Vector3 lastCenter = vertexList[vertexList.Count - 5] + vertexList[vertexList.Count - 6] + vertexList[vertexList.Count - 7];
+                    lastCenter = lastCenter / 3;
+
+                    Vector3 nextPoint = position;
+                    Vector3 posModTemp = quaternion * new Vector3(0f, SegmentLength, 0f);
+                    nextPoint.x += posModTemp.x;
+                    nextPoint.y += posModTemp.y;
+                    nextPoint.z += posModTemp.z;
+
+                    SpawnLeaves(position, nextPoint);
+                }
+
                 return; 
             }
 
             // Continue current branch (randomizing the angle)
             texCoordV += 0.0625f * (SegmentLength + SegmentLength / radius);
-            position += quaternion * new Vector3(0f, SegmentLength, 0f);
-            transform.rotation = quaternion; 
-            var x = (Random.value - 0.5f) * Twisting;
-            var z = (Random.value - 0.5f) * Twisting;
-            transform.Rotate(x, 0f, z);
+            Vector3 posMod = quaternion * new Vector3(0f, SegmentLength, 0f);
+            position.x += posMod.x;
+            position.y += posMod.y;
+            position.z += posMod.z;
+
+            if(Twisting + BranchProbability > 0)
+                _transform.rotation = quaternion;
+            float x = 0f;
+            float z = 0f;
+            if(Twisting > 0)
+            {
+                x = (Random.value - 0.5f) * Twisting;
+                z = (Random.value - 0.5f) * Twisting;
+                _transform.Rotate(x, 0f, z);
+            }
             lastRingVertexIndex = vertexList.Count - NumberOfSides - 1;
-            Branch(transform.rotation, position, lastRingVertexIndex, radius, texCoordV); // Next segment
+
+            if (Twisting + BranchProbability > 0)
+                Branch(_transform.rotation, position, lastRingVertexIndex, radius, texCoordV, segmentID + 1); // Next segment
+            else
+                Branch(quaternion, position, lastRingVertexIndex, radius, texCoordV, segmentID + 1); // Next segment
 
             // Do we branch?
-            if (vertexList.Count + NumberOfSides >= MaxNumVertices || Random.value > BranchProbability) return;
+            if (vertexList.Count + NumberOfSides >= MaxNumVertices || Random.value > BranchProbability || segmentID < TrunkSegmentLength)
+            {
+                return;
+            }
 
             // Yes, add a new branch
-            transform.rotation = quaternion;
+            _transform.rotation = quaternion;
             x = Random.value * 70f - 35f;
             x += x > 0 ? 10f : -10f;
             z = Random.value * 70f - 35f;
             z += z > 0 ? 10f : -10f;
-            transform.Rotate(x, 0f, z);
-            Branch(transform.rotation, position, lastRingVertexIndex, radius, texCoordV);
+            _transform.Rotate(x, 0f, z);
+            Branch(_transform.rotation, position, lastRingVertexIndex, radius, texCoordV, segmentID + 1000);
+        }
+
+
+        // Spawn a clump of leaves
+        void SpawnLeaves(Vector3 pos, Vector3 prevPos)
+        {
+            //Debug.Log("spawning leaf!");
+
+            if (!leafClumpPrefab)
+                return;
+            GameObject newLeaf = Instantiate(leafClumpPrefab);
+
+            newLeaf.transform.parent = _transform;
+            newLeaf.transform.localPosition = pos;
+
+            if (leavesPointingOut)
+            {
+                Vector3 pointDir = (prevPos - newLeaf.transform.position).normalized;
+                Debug.Log(pointDir);
+
+            }
+            
+
+            MeshFilter[] meshes = newLeaf.GetComponentsInChildren<MeshFilter>();
+
+            Color32 newCol = new Color32();
+
+            float colorNoise = Random.Range(-leafColorNoise, leafColorNoise);
+            newCol = new Color(baseLeafColor.r, baseLeafColor.g + colorNoise, baseLeafColor.b, 1);
+
+
+//            for(int j = 0; j < meshes.Length; j++) {
+//                MeshFilter mFilter = meshes[j];
+//
+//                Mesh mesh = mFilter.mesh;
+//
+//                Vector3[] vertices = mesh.vertices;
+//
+//                // create new colors array where the colors will be created.
+//                Color32[] colors = new Color32[vertices.Length];
+//
+//                if(randColorPerLeaf)
+//                {
+//                    newCol = new Color(baseLeafColor.r, baseLeafColor.g + j * 0.5f * colorNoise, baseLeafColor.b, 1);
+//                }
+//
+//                for (int i = 0; i < vertices.Length; i++)
+//                {
+//                    colors[i] = newCol;
+//                }
+//
+//                // assign the array of colors to the Mesh.
+//                mesh.colors32 = colors;
+//            }
+
+
+            if(!scaleAllInstances)
+            {
+                newLeaf.transform.localScale = GetModifiedLeafScale();
+            }
+
+            leafList.Add(newLeaf);
+        }
+
+        public Vector3 GetModifiedLeafScale()
+        {
+            Vector3 baseLeafScale = leafClumpPrefab.transform.localScale;
+            Vector3 leafScale;
+
+            if (uniformLeafScale)
+            {
+                leafScale = baseLeafScale * Random.Range(leafScaleMin.x, leafScaleMax.x);
+            }
+            else if (uniformXZLeafScale)
+            {
+                float xScale = Random.Range(leafScaleMin.x, leafScaleMax.x);
+                leafScale = Vector3.Scale(baseLeafScale, new Vector3(xScale, Random.Range(leafScaleMin.y, leafScaleMax.y), xScale));
+            }
+            else
+            {
+                leafScale = Vector3.Scale(baseLeafScale, new Vector3(Random.Range(leafScaleMin.x, leafScaleMax.x), Random.Range(leafScaleMin.y, leafScaleMax.y), Random.Range(leafScaleMin.z, leafScaleMax.z)));
+            }
+
+            if (leafScaleReduction && leafList.Count > 0)
+                leafScale *= Mathf.Pow(leafScaleReductionFactor, Mathf.Min(leafList.Count, 3));
+
+            return leafScale;
         }
 
         // ---------------------------------------------------------------------------------------------------------------------------
@@ -306,7 +491,7 @@ namespace Wasabimole.ProceduralTree
             ringShape = new float[NumberOfSides + 1];
             var k = (1f - BranchRoundness) * 0.5f;
             // Randomize the vertex offsets, according to BranchRoundness
-            Random.seed = Seed;
+            Random.InitState(Seed);
             for (var n = 0; n < NumberOfSides; n++) ringShape[n] = 1f - (Random.value - 0.5f) * k;
             ringShape[NumberOfSides] = ringShape[0];
         }
@@ -317,19 +502,28 @@ namespace Wasabimole.ProceduralTree
 
         public void Update()
         {
-            // Tree parameter checksum (add any new parameters here!)
-            var newChecksum = (Seed & 0xFFFF) + NumberOfSides + SegmentLength + BaseRadius + MaxNumVertices +
-                RadiusStep + MinimumRadius + Twisting + BranchProbability + BranchRoundness;
+            if(editMode)
+            {
+                // Tree parameter checksum (add any new parameters here!)
+                var newChecksum = (Seed & 0xFFFF) + NumberOfSides + SegmentLength + BaseRadius + MaxNumVertices +
+                    RadiusStep + MinimumRadius + Twisting + BranchProbability + BranchRoundness;
 
-            // Return (do nothing) unless tree parameters change
-            if (newChecksum == checksum && filter.sharedMesh != null) return;
+                // Return (do nothing) unless tree parameters change
+                if (newChecksum == checksum && filter.sharedMesh != null) return;
 
-            checksumSerialized = checksum = newChecksum;
+                checksumSerialized = checksum = newChecksum;
 
 #if UNITY_EDITOR
-            if (!CanGetPrefabMesh()) 
+                if (!CanGetPrefabMesh())
+                    GenerateTree(); // Update tree mesh
 #endif
-                GenerateTree(); // Update tree mesh
+
+                if(!Application.isEditor)
+                {
+                    GenerateTree();
+                }
+            }
+
         }
 
         // ---------------------------------------------------------------------------------------------------------------------------

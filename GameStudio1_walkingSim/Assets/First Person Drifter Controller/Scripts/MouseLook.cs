@@ -41,6 +41,12 @@ public class MouseLook : MonoBehaviour
 	public float framesOfSmoothing = 5;
  
 	Quaternion originalRotation;
+
+	void Awake()
+	{
+		startingSensX = sensitivityX;
+		startingSensY = sensitivityY;
+	}
 	
 	void Start ()
 	{			
@@ -51,8 +57,6 @@ public class MouseLook : MonoBehaviour
 		
 		originalRotation = transform.localRotation;
 
-		startingSensX = sensitivityX;
-		startingSensY = sensitivityY;
 	}
  
 	void Update ()
