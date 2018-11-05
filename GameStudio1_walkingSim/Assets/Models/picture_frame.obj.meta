@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aacec3183ccac5542955f5090eb0433b
+guid: d0adbeae25ebfce4dafe469e84e7e58f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -46,7 +46,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
-    importBlendShapes: 0
+    importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
