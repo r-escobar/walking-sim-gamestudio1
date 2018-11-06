@@ -97,11 +97,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 79
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: dfb357a5efdda40d79bfb8b8ed0d80a3, type: 3}
+    m_FontSize: 85
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 175
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -130,11 +130,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 33
+    m_Font: {fileID: 12800000, guid: dfb357a5efdda40d79bfb8b8ed0d80a3, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 175
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -163,11 +163,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_Font: {fileID: 12800000, guid: dfb357a5efdda40d79bfb8b8ed0d80a3, type: 3}
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 175
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -175,13 +175,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'A game by
+  m_Text: 'By:
 
-    Wenjing Ma
+    Ricardo Escobar
 
-    and
+    &
 
-    Ricardo Escobar'
+    Wenjing Ma'
 --- !u!222 &222387310985928336
 CanvasRenderer:
   m_ObjectHideFlags: 1
