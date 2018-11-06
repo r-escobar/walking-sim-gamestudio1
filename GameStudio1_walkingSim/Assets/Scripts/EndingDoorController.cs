@@ -12,9 +12,11 @@ public class EndingDoorController : MonoBehaviour {
 	public Vector3 targetDoorRot;
 	public Transform doorParent;
 
+	public float yMoveAmount = 2f;
+
 	void Start()
 	{
-		PerformUndeformAction();
+		//PerformUndeformAction();
 	}
 	
 	
@@ -24,7 +26,7 @@ public class EndingDoorController : MonoBehaviour {
 			return;
 		hasPerformedAction = true;
 
-		transform.DOMoveY(2, slideDuration).SetEase(Ease.InOutQuad).OnComplete(OpenDoor);
+		transform.DOMoveY(yMoveAmount, slideDuration).SetEase(Ease.InOutQuad).OnComplete(OpenDoor);
 	}
 
 	public void OpenDoor()
