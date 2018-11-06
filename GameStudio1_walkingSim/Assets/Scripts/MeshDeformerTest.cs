@@ -66,6 +66,8 @@ public class MeshDeformerTest : MonoBehaviour {
 
 	public bool highPerformanceMode = false;
 	public int highPerformanceNumTris = 300;
+
+	private bool stopUpdating = false;
 	
 	void Start()
 	{
@@ -91,17 +93,17 @@ public class MeshDeformerTest : MonoBehaviour {
 	
 	void Update()
 	{
-
-		if (deformModifier == 0f && stayUndeformed && hasBeenUndeformed)
+		if (stopUpdating)
 			return;
+//		if (deformModifier == 0f && stayUndeformed && hasBeenUndeformed)
+//			return;
 		
-		if (!hasBeenUndeformed && deformModifier == 0f)
+		if (!hasBeenUndeformed && deformModifier == 0f && !giantUnderformTarget)
 		{
 			if(undeformActionTarget)
 				undeformActionTarget.SendMessage("PerformUndeformAction");
-			if (giantUnderformTarget)
-				giantUnderformTarget.numDependentObjects--;
-						
+			
+			Debug.Log("finished sequence");
 			hasBeenUndeformed = true;
 		}
 		
@@ -194,15 +196,25 @@ public class MeshDeformerTest : MonoBehaviour {
 
 			if (triangleGapDeformation)
 			{
-				for (int i = 0; i < baseTriList.Length; i += 3)
+				if (deformModifier == 0f && hasBeenUndeformed)
 				{
-					if (Random.value > (triangleGapProb * deformModifier))
+					modifiedTriList = new List<int>(baseTriList);
+					hasBeenUndeformed = true;
+				}
+				else
+				{
+					
+					for (int i = 0; i < baseTriList.Length; i += 3)
 					{
-						modifiedTriList.Add(baseTriList[i]);
-						modifiedTriList.Add(baseTriList[i + 1]);
-						modifiedTriList.Add(baseTriList[i + 2]);
+						if (Random.value > (triangleGapProb * deformModifier))
+						{
+							modifiedTriList.Add(baseTriList[i]);
+							modifiedTriList.Add(baseTriList[i + 1]);
+							modifiedTriList.Add(baseTriList[i + 2]);
+						}
 					}
 				}
+				
 			}
 
 
@@ -210,20 +222,29 @@ public class MeshDeformerTest : MonoBehaviour {
 			{
 				if(!triangleGapDeformation)
 					modifiedTriList = new List<int>(baseTriList);
-
-				int size = modifiedTriList.Count;
-				if (highPerformanceMode)
-					size = Mathf.Min(highPerformanceNumTris, size);
 				
-				for (int i = 0; i < size; i++) {
-					if (Random.value <= (triangleDeformProb * deformModifier))
-					{
-						int temp = modifiedTriList[i];
-						int randomIndex = Random.Range(i, modifiedTriList.Count);
-						modifiedTriList[i] = modifiedTriList[randomIndex];
-						modifiedTriList[randomIndex] = temp;
+				if (deformModifier == 0f && hasBeenUndeformed)
+				{
+					modifiedTriList = new List<int>(baseTriList);
+					hasBeenUndeformed = true;
+				}
+				else
+				{
+					int size = modifiedTriList.Count;
+					if (highPerformanceMode)
+						size = Mathf.Min(highPerformanceNumTris, size);
+				
+					for (int i = 0; i < size; i++) {
+						if (Random.value <= (triangleDeformProb * deformModifier))
+						{
+							int temp = modifiedTriList[i];
+							int randomIndex = Random.Range(i, modifiedTriList.Count);
+							modifiedTriList[i] = modifiedTriList[randomIndex];
+							modifiedTriList[randomIndex] = temp;
+						}
 					}
 				}
+				
 			}
 			
 		
