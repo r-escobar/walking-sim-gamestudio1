@@ -28,6 +28,13 @@ public class BobAndFloat3D : MonoBehaviour
     bool firstFloat = true;
     bool firstBob = true;
 
+    private bool rotate = false;
+    private bool hasPerformedAction = false;
+    
+    public float degreesPerSecond = 5f;
+
+    public bool startBobbingOnAwake = false;
+
     // Use this for initialization
     void Start()
     {
@@ -47,26 +54,49 @@ public class BobAndFloat3D : MonoBehaviour
         }
         else if (isBobbing)
         {
-            if (startUp)
+            if (startBobbingOnAwake)
             {
-                BobUp();
-            }
-            else
-            {
-                BobDown();
+                if (startUp)
+                {
+                    BobUp();
+                }
+                else
+                {
+                    BobDown();
+                }
             }
         }
+
+        degreesPerSecond *= Mathf.Sign(Random.value - 0.5f);
+        degreesPerSecond *= Random.Range(0.85f, 1.15f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(rotate)
+            transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+    }
 
+    public void PerformUndeformAction()
+    {
+        if(hasPerformedAction)
+            return;
+        hasPerformedAction = true;
+        StartBobbing();
     }
 
     public void StartBobbing()
     {
-        BobUp();
+        
+        if (startUp)
+        {
+            BobUp();
+        }
+        else
+        {
+            BobDown();
+        }
     }
 
     public void StopMovement()
@@ -77,6 +107,7 @@ public class BobAndFloat3D : MonoBehaviour
 
     public void BobUp()
     {
+        rotate = true;
         Hashtable moveArgs = new Hashtable();
 
         float newYpos;
@@ -104,6 +135,7 @@ public class BobAndFloat3D : MonoBehaviour
 
     public void BobDown()
     {
+        rotate = true;
         Hashtable moveArgs = new Hashtable();
 
         float newYpos;

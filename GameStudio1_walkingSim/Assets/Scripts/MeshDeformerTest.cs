@@ -63,7 +63,9 @@ public class MeshDeformerTest : MonoBehaviour {
 	public MeshDeformerTest giantUnderformTarget;
 	private bool hasBeenUndeformed = false;
 	private int maxObjects;
-	
+
+	public bool highPerformanceMode = false;
+	public int highPerformanceNumTris = 300;
 	
 	void Start()
 	{
@@ -90,6 +92,19 @@ public class MeshDeformerTest : MonoBehaviour {
 	void Update()
 	{
 
+		if (deformModifier == 0f && stayUndeformed && hasBeenUndeformed)
+			return;
+		
+		if (!hasBeenUndeformed && deformModifier == 0f)
+		{
+			if(undeformActionTarget)
+				undeformActionTarget.SendMessage("PerformUndeformAction");
+			if (giantUnderformTarget)
+				giantUnderformTarget.numDependentObjects--;
+						
+			hasBeenUndeformed = true;
+		}
+		
 		if (maxObjects == 0)
 		{
 			volumeControl = Mathf.Clamp(volumeControl, 0f, maxVolume);
@@ -195,8 +210,12 @@ public class MeshDeformerTest : MonoBehaviour {
 			{
 				if(!triangleGapDeformation)
 					modifiedTriList = new List<int>(baseTriList);
+
+				int size = modifiedTriList.Count;
+				if (highPerformanceMode)
+					size = Mathf.Min(highPerformanceNumTris, size);
 				
-				for (int i = 0; i < modifiedTriList.Count; i++) {
+				for (int i = 0; i < size; i++) {
 					if (Random.value <= (triangleDeformProb * deformModifier))
 					{
 						int temp = modifiedTriList[i];
